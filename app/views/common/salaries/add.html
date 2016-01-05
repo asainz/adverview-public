@@ -1,0 +1,46 @@
+<div class="page page-salaries page-add-salary">
+
+    <banner class="banner-add-agency banner-add-salary" background-image="bannerData.background">
+        <div class="banner-content">
+            <span>{{bannerData.text}}</span>
+
+            <footer>
+                <p class="disclaimer">
+                    <span class="icon-info-full"></span>
+                    Tus datos son totalmente confidenciales
+                </p>
+            </footer>
+        </div>
+    </banner>
+
+    <form class="form" role="form" name="form" novalidate ng-model="addSalaryForm">
+
+        <div class="form-body">
+            <div class="form-block">
+                <input-control form="form" control="model.salary"></input-control>
+                <select-control form="form" control="model.currency"></select-control>
+            </div>
+
+            <div class="form-block">
+                <div class="form-group">
+                  <autocomplete
+                      ng-model="model.agencyName.value"
+                      data="agenciesForSuggestion"
+                      attr-placeholder="Encontrá una agencia"
+                      click-activation="true"
+                      on-select="handleNewSearchOptionSelected"
+                  ></autocomplete>
+                </div>
+
+                <select-control form="form" control="model.currentlyEmployed"></select-control>
+                <select-control form="form" control="model.currentJobPosition"></select-control>
+                <select-control form="form" control="model.currentSeniority"></select-control>
+            </div>
+
+            <submit-control form="form" control="model.submit" when-submit="submit"></submit-control>
+
+        </div>
+
+    </form>
+
+</div>

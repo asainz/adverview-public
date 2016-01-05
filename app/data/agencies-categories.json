@@ -1,0 +1,44 @@
+[
+    {
+        "name": "",
+        "alias": "",
+        "selectable": false,
+        "filterBy": 1
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "filterBy": 3
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "filterBy": 5
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "filterBy": 6
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "filterBy": 7
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "filterBy": 8
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "filterBy": 4
+    }
+]

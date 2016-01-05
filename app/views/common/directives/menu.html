@@ -1,0 +1,55 @@
+<div class="menu" ng-class="{'menu-open': isMenuOpen}">
+    <div class="menu-close-button">
+        <span ng-show="isMenuOpen" ng-click="toggleMenu()" class="header-icon icon-custom-menu"></span>
+    </div>
+    <h1 class="logo">AdverView</h1>
+
+    <div class="menu-profile">
+        <div ng-show="user.loggedIn">
+            <div class="menu-profile-image-container">
+                <img ng-src="{{user.profile.picture}}" alt="profile {{user.profile.firstName}}">
+            </div>
+            <div class="user-info" ng-show="user.loggedIn">
+                <p>Hola, <span>{{user.profile.firstName}}</span></p>
+                <span class="logout" ng-click="logoutWithFacebook()">Log Out</span>
+            </div>
+        </div>
+
+        <div ng-show="!user.loggedIn">
+            <div class="menu-profile-image-container">
+                <img class="menu-profile-placeholder" src="images/svg/profile-placeholder.svg" alt="Profile placeholder image">
+            </div>
+            <div class="user-info">
+                <p>Hola</p>
+                <span class="logout" ng-click="goToLogin()">Log In</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-options">
+        <ul>
+            <li>
+                <div>
+                    <autocomplete
+                        ng-model="searchText"
+                        data="agenciesForSuggestion"
+                        attr-placeholder="Encontrá una agencia"
+                        click-activation="true"
+                        on-select="handleNewSearchOptionSelected"
+                    ></autocomplete>
+                </div>
+            </li>
+            <li ng-click="goToAgencies()">Agencias</li>
+            <li ng-click="goToAddAgency()">Sugerí una agencia</li>
+            <li ng-click="goToSalaries()">Salarios</li>
+            <li ng-click="goToNews()">Foro</li>
+            <li class="has-sublist">Siguiendo <span class="icon-custom-chevron-down"></span></li>
+            <ul>
+                <li ng-repeat="agency in user.profile.followedAgencies">
+                    <span ng-click="goToAgency(agency)">{{agency.name}}</span>
+                    <span class="icon-cancel" ng-click="unfollow(agency)"></span>
+                </li>
+            </ul>
+        </ul>
+    </div>
+</div>

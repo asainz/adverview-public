@@ -1,0 +1,36 @@
+<navbar></navbar>
+
+<div class="page page-agencies">
+
+    <banner class="banner-agencies banner-autocomplete" background-image="bannerBackgroundImage">
+        <div class="banner-content">
+            <span
+                ng-show="totalReviews"
+                class="banner-reviews-counter"
+                ng-click="goToAllReviews()"
+            >
+                {{totalReviews}} reviews
+            </span>
+
+            <div class="banner-searchbox">
+                <autocomplete
+                    ng-model="searchText"
+                    data="agenciesForSuggestion"
+                    attr-placeholder="Encontrá una agencia"
+                    click-activation="true"
+                    on-select="handleNewSearchOptionSelected"
+                ></autocomplete>
+            </div>
+            <span class="banner-icon icon-search"></span>
+        </div>
+    </banner>
+
+    <div class="ranking-header" ng-click="showFilterOptions()">
+        <div><h2>{{selectedFilterOption}}</h2></div>
+        <span class="icon-custom-chevron-down"></span>
+    </div>
+
+    <div ng-include="agenciesContentPartial" class="page-content">
+
+    </div>
+</div>

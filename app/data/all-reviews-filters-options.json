@@ -1,0 +1,23 @@
+[
+    {
+        "name": "",
+        "alias": "",
+        "selectable": false,
+        "sort": "dateAdded",
+        "dir": "desc"
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "sort": "overallScore",
+        "dir": "asc"
+    },
+    {
+        "name": "",
+        "alias": "",
+        "selectable": true,
+        "sort": "overallScore",
+        "dir": "desc"
+    }
+]

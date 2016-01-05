@@ -1,0 +1,36 @@
+<div>
+    <div class="details-block salary-details-block" ng-hide="!salary">
+        <div class="block-content">
+            <header ng-click="goToAverageSalary(salary)">
+                <h2>{{salary.job}} {{salary.currentSeniority}}</h2>
+            </header>
+
+            <div class="salary-date">
+                <span><span class="is-uppercase">{{salary.country}}</span>, {{salary.date}}</span>
+            </div>
+            <footer>
+                <div>
+                    <span
+                        class="action-button inline-action-button main-action-button"
+                        ng-click="goToAverageSalary(salary)"
+                    >Ver promedio</span>
+                    <span
+                        ng-if="showSimilarPositions"
+                        class="similar-positions"
+                        ng-click="goToSimilarPositions()"
+                    >
+                        2 SIMILARES
+                    </span>
+                </div>
+            </footer>
+        </div>
+
+        <div class="block-aside-right coloured-salary" ng-class="getSalaryColourClass()" ng-click="goToAverageSalary(salary)">
+            {{salary.currencyPrefix}}{{salary.formattedIncome}}
+        </div>
+    </div>
+
+    <div ng-show="!salary" class="details-block-loading">
+        <icon name="oval-spinner" size="small"></icon>
+    </div>
+</div>

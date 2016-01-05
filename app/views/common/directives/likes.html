@@ -1,0 +1,17 @@
+<div class="likes">
+    <span 
+        class="icon icon-thumbs-up"
+        ng-class="{'is-user-liking': isUserLiking}"
+        ng-click="handleLike()"
+    >
+        <span class="badge">{{model.like}}</span>
+    </span>
+
+    <span 
+        class="icon icon-thumbs-down"
+        ng-click="handleDislike()"
+        ng-class="{'is-user-disliking': isUserDisliking}"
+    >
+        <span class="badge">{{model.unlike}}</span>
+    </span>
+</div>

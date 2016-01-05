@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta name="fragment" content="!">
+
+        <!-- it will added ar build time -->
+        <base href="http://localhost:9000/">
+
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
+
+
+        <title>AdverView</title>
+        <meta name="description" content="AdverView">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- build:css(.) styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/ng-slider/dist/css/ng-slider.min.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
+        <!-- build:css(.tmp) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+
+        <script src="utils/modernizr.custom.91846.js"></script>
+        <script src="utils/platform-classes.js"></script>
+        <script src="utils/metadata.js"></script>
+
+        <script>
+            window.APP_FIRST_TIME_NAVIGATION = true;
+        </script>
+    </head>
+    <body ng-app="AdverView" block-screen="{{screenBlocked}}" ng-controller="MainCtrl">
+        <div id="fb-root"></div>
+        <screen-loader></screen-loader>
+        <div
+            ng-hide="isLoadingContextForFirstTime"
+            class="container-wrapper is-full-height is-scrollable-height"
+            infinite-scroll
+        >
+            <screen-blocker></screen-blocker>
+            <select-list></select-list>
+            <main-header></main-header>
+
+            <dialog></dialog>
+            <notification></notification>
+
+            <!-- Add your site or application content here -->
+            <div class="main-container">
+                <div class="content-container is-full-height">
+                    <div ng-view=""></div>
+                </div>
+            </div>
+
+            <menu></menu>
+        </div>
+
+        <div ng-show="isLoadingContextForFirstTime" class="unavailable-app-blocker">
+            <div>
+                <h1>Assurelink</h1>
+            </div>
+            <footer>
+                <p>
+                  <icon name="oval-spinner" size="small"></icon>
+                </p>
+                <p>Cargando agencias de buenos aires</p>
+            </footer>
+        </div>
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-XXXXX-X');
+            ga('send', 'pageview');
+        </script>
+
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <script src="bower_components/underscore.string/dist/underscore.string.js"></script>
+        <!-- bower:js -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/json3/lib/json3.js"></script>
+        <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/angular-route/angular-route.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+        <script src="bower_components/ng-slider/dist/ng-slider.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+
+        <script src="scripts/mixins/review-news-entities.js"></script>
+        <script src="scripts/mixins/social-networks-sharer.js"></script>
+
+        <script src="scripts/components/autocomplete/autocomplete.js"></script>
+
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/details-page-common.js"></script>
+        <script src="scripts/controllers/agencies/agencies.js"></script>
+        <script src="scripts/controllers/agencies/details.js"></script>
+        <script src="scripts/controllers/agencies/add.js"></script>
+        <script src="scripts/controllers/agencies/agencies-list.js"></script>
+        <script src="scripts/controllers/salaries/salaries.js"></script>
+        <script src="scripts/controllers/salaries/add.js"></script>
+        <script src="scripts/controllers/salaries/average.js"></script>
+        <script src="scripts/controllers/reviews/details.js"></script>
+        <script src="scripts/controllers/reviews/reviews.js"></script>
+        <script src="scripts/controllers/reviews/add.js"></script>
+        <script src="scripts/controllers/news/news.js"></script>
+        <script src="scripts/controllers/news/expanded.js"></script>
+
+        <script src="scripts/controllers/authentication/login.js"></script>
+
+        <script src="scripts/config/templates-urls.js"></script>
+        <script src="scripts/config/pagination.js"></script>
+        <script src="scripts/config/length.js"></script>
+        <script src="scripts/config/resources.js"></script>
+        <script src="scripts/config/regexp.js"></script>
+        <script src="scripts/config/environment.js"></script>
+        <script src="scripts/config/paths.js"></script>
+        <script src="scripts/config/compiled-templates.js"></script>
+
+        <script src="scripts/static-content/copy.js"></script>
+
+        <script src="scripts/filters/ellipsis.js"></script>
+        <script src="scripts/filters/join.js"></script>
+        <script src="scripts/filters/salary.js"></script>
+        <script src="scripts/filters/salary-colour.js"></script>
+        <script src="scripts/filters/review-date.js"></script>
+
+        <script src="scripts/normalizers/general.js"></script>
+
+        <script src="scripts/services/users/users.js"></script>
+        <script src="scripts/services/users/country.js"></script>
+        <script src="scripts/services/news/news.js"></script>
+        <script src="scripts/services/likes/likes.js"></script>
+        <script src="scripts/services/agencies/agencies.js"></script>
+        <script src="scripts/services/jobs/jobs.js"></script>
+        <script src="scripts/services/currency/currency.js"></script>
+        <script src="scripts/services/salaries/salaries.js"></script>
+        <script src="scripts/services/salaries/range.js"></script>
+        <script src="scripts/services/comments/comments.js"></script>
+        <script src="scripts/services/followers/followers.js"></script>
+        <script src="scripts/services/agencies/categories.js"></script>
+        <script src="scripts/services/agencies/filters-manager.js"></script>
+        <script src="scripts/services/reviews/reviews.js"></script>
+        <script src="scripts/services/reviews/filters-options.js"></script>
+        <script src="scripts/services/utility/templates-manager.js"></script>
+        <script src="scripts/services/utility/paths-manager.js"></script>
+        <script src="scripts/services/utility/resources-manager.js"></script>
+        <script src="scripts/services/utility/screen.js"></script>
+        <script src="scripts/services/utility/geolocation.js"></script>
+        <script src="scripts/services/utility/underscore-string.js"></script>
+        <script src="scripts/services/utility/pubsub.js"></script>
+        <script src="scripts/services/utility/platform.js"></script>
+        <script src="scripts/services/utility/navigation.js"></script>
+        <script src="scripts/services/utility/metadata.js"></script>
+        <script src="scripts/services/social-sharer/count.js"></script>
+
+        <script src="scripts/services/utility/form-validation.js"></script>
+        <script src="scripts/services/utility/fb-manager.js"></script>
+
+        <script src="scripts/services/components/select-list.js"></script>
+        <script src="scripts/services/components/header.js"></script>
+        <script src="scripts/services/components/dialog.js"></script>
+        <script src="scripts/services/components/infinite-loader.js"></script>
+        <script src="scripts/services/components/context.js"></script>
+        <script src="scripts/services/components/notifications.js"></script>
+
+        <script src="scripts/directives/removed-for-viewport.js"></script>
+        <script src="scripts/directives/sanitize.js"></script>
+        <script src="scripts/directives/icon.js"></script>
+        <script src="scripts/directives/navbar.js"></script>
+        <script src="scripts/directives/comments.js"></script>
+        <script src="scripts/directives/likes.js"></script>
+        <script src="scripts/directives/infinite-scroll.js"></script>
+        <script src="scripts/directives/screen-blocker.js"></script>
+        <script src="scripts/directives/screen-loader.js"></script>
+        <script src="scripts/directives/progress-radial.js"></script>
+        <script src="scripts/directives/select-list.js"></script>
+        <script src="scripts/directives/body.js"></script>
+        <script src="scripts/directives/banner.js"></script>
+        <script src="scripts/directives/load-more-content.js"></script>
+        <script src="scripts/directives/header.js"></script>
+        <script src="scripts/directives/menu.js"></script>
+        <script src="scripts/directives/dialog.js"></script>
+        <script src="scripts/directives/notification.js"></script>
+        <script src="scripts/directives/agency-details-block.js"></script>
+        <script src="scripts/directives/review-details-block.js"></script>
+        <script src="scripts/directives/salary-details-block.js"></script>
+        <script src="scripts/directives/validators/minimum-words.js"></script>
+
+        <script src="scripts/directives/input-control.js"></script>
+        <script src="scripts/directives/radio-control.js"></script>
+        <script src="scripts/directives/select-control.js"></script>
+        <script src="scripts/directives/submit-control.js"></script>
+        <script src="scripts/directives/slider-control.js"></script>
+        <script src="scripts/directives/checkbox-control.js"></script>
+        <!-- endbuild -->
+
+        <script>
+            //no-flexbox
+            // window.alert( document.querySelector('html').classList );
+        </script>
+    </body>
+</html>

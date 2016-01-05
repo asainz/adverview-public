@@ -1,0 +1,139 @@
+.page-salaries{
+
+    .salary-details{
+        .salary-details-block{
+            @include apply-default-padding-for-container();
+            @include clearfix();
+
+            border-bottom: 1px solid palette(gray, light);
+            font-size: $font-size-normal;
+
+            &:last-child{
+                border-bottom: none;
+            }
+
+            &:first-child{
+                padding: 2rem 1rem;
+            }
+
+            .job-details{
+                h2{
+                    margin: 0;
+                    font-size: $font-size-medium;
+                    font-family: $bold-font;
+                    color: palette(text, black);
+                }
+
+                p{
+                    font-size: $font-size-small;
+                    text-transform: uppercase;
+
+                    &:last-child{
+                        margin-top: 1.5rem;
+                    }
+                }
+            }
+
+            .column-left{
+                color: palette(gray, base);
+                float: left;
+            }
+
+            .column-right{
+                @extend %vertical-centered-parent;
+
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin-right: 1rem;
+
+                color: palette(text, nav);
+            }
+
+            .column-vertically-centered-content{
+                @extend %vertical-centered-parent;
+            }
+
+            .multiline-column{
+                .multiline-column-line{
+                    position: relative;
+                    float: left;
+                    clear: both;
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                    .column-right{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .salary-details-block{
+        position: relative;
+        color: palette(text, main);
+
+        h2{
+            margin: 0;
+            font-size: $font-size-normal;
+            line-height: $font-size-medium;
+            font-family: $bold-font;
+            color: palette(text, black);
+        }
+
+        .similar-positions{
+            font-size: $font-size-xsmall;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .salary-date{
+            font-size: $font-size-xsmall;
+        }
+
+        .block-aside-right{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        &.agencies-salaries-ranking{
+            .loading-icon{
+                p{
+                    text-align: center;
+                }
+            }
+
+            .column-right{
+                p{
+                    color: palette(text, highlighted);
+                }
+            }
+
+            p{
+                text-align: right;
+            }
+        }
+    }
+
+}
+
+.coloured-salary{
+    font-size: $font-size-medium;
+    font-family: $bold-font;
+
+    &.coloured-salary-average{
+        color: score(60);
+    }
+
+    &.coloured-salary-gt-average{
+        color: score(100);
+    }
+
+    &.coloured-salary-lt-average{
+        color: score(10);
+    }
+}

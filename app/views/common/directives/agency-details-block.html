@@ -1,0 +1,40 @@
+<div>
+    <div class="details-block agency-details-block" ng-hide="!agency">
+        <div class="block-aside-left" ng-click="goToDetails(agency)">
+            <div class="agency-logo-container">
+                <img ng-src="{{agency.thumbnail}}" alt="logo {{agency.name}}">
+            </div>
+        </div>
+        <div class="block-content">
+            <header ng-click="goToDetails(agency)">
+                <h3 ng-if="!isDetailsPage" ng-bind-html="agency.name"></h3>
+                <h1 ng-if="isDetailsPage" ng-bind-html="agency.name"></h1>
+            </header ng-click="goToDetails(agency)">
+            <span>{{agency.fullLocation}}</span>
+            <footer>
+                <div ng-if="showAddReviewOption">
+                    <span
+                        class="action-button inline-action-button main-action-button"
+                        ng-click="goToAddReview(agency)"
+                    >opiná</span>
+                    <span
+                        ng-click="goToDetails(agency)"
+                        ng-if="agency.totalReviews > 0"
+                    >
+                        {{agency.totalReviews}}
+                        <span ng-if="agency.totalReviews > 1">opiniones</span>
+                        <span ng-if="agency.totalReviews === 1">opinión</span>
+                    </span>
+                </div>
+                <span class="agency-disclaimer" ng-if="!showAddReviewOption">Tu review es completamente anónima</span>
+            </footer>
+        </div>
+        <div class="block-aside-right" ng-if="showScore" ng-click="goToDetails(agency)">
+            <progress-radial circle-size="{{scoreSizeInPixels}}" value="{{agency.score.overall}}"></progress-radial>
+        </div>
+    </div>
+
+    <div ng-show="!agency" class="details-block-loading">
+        <icon name="oval-spinner" size="small"></icon>
+    </div>
+</div>

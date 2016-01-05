@@ -1,0 +1,10 @@
+<div class="form-group" ng-class="{'has-error': hasErrors}">
+    <div class="select-group" ng-click="showOptions()">
+        <span ng-hide="getSelectedOption()">{{control.label}}</span>
+        <span ng-show="getSelectedOption()" class="selected">{{getSelectedOption()}}</span>
+    </div>
+
+    <!-- We need this hidden input so angular can treat this select custom element as a normal input
+    asn we get all the things provided by angular validation-wise -->
+    <input type="hidden" ng-model="selectedOption" name="{{control.name}}" ng-required="control.validations.required">
+</div>

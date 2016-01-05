@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<scenario http_resp_status_code="200" id="1" name="default success response" tag="" version="1.0" xml:lang="en-US">
+<scenario_match scenario_match_evaluation_rules_flag="false"/>
+<scenario_response>
+<xi:include href="default_success_response.txt" parse="text" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</scenario_response>
+<scenario_response_header/>
+</scenario>

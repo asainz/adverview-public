@@ -1,0 +1,24 @@
+<div class="form-group" ng-class="{'has-error': hasErrors}">
+
+    <label class="control-label">{{control.label}}</label>
+
+    <div class="checkbox-group">
+        <div class="checkbox-group-item" ng-repeat="option in options">
+            <input 
+                ng-change="toggleOption(option)"
+                type="checkbox"
+                ng-model="option.selected"
+                id="checkboxControl_{{control.name}}_{{$index}}"
+            >
+            <label for="checkboxControl_{{control.name}}_{{$index}}">
+                {{option.value}}
+            </label> 
+        </div>
+    </div>
+
+    <p class="form-help-block form-footnote" ng-if="control.footnote">{{control.footnote}}</p>
+
+    <!-- We need this hidden input so angular can treat this select custom element as a normal input
+    asn we get all the things provided by angular validation-wise -->
+    <input type="hidden" ng-model="control.value" name="{{control.name}}" ng-required="control.validations.required">
+</div>

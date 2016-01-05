@@ -1,0 +1,203 @@
+.form{
+    background: palette(white);
+
+    .form-body{
+        @include apply-default-padding-for-container();
+    }
+
+    .form-block{
+        margin-bottom: 3rem;
+
+        .form-block-title{
+            margin-bottom: 1rem;
+        }
+    }
+
+    .form-group{
+
+        // &.has-error{
+        //     border: 1px solid shade(red, fifty);
+        // }
+    }
+
+    .control-label{
+        margin-bottom: 1rem;
+        float: left;
+    }
+
+    .control-labels-container{
+        @include clearfix();
+    }
+
+    .form-control{
+        background: palette(gray, light);
+        border: none;
+        border-radius: 2px;
+        box-shadow: none;
+    }
+
+    .form-help-block{
+        font-size: $font-size-xsmall;
+        color: palette(gray);
+        line-height: 24px;
+
+        &.form-validation-length{
+            float: right;
+        }
+
+        .form-footnote{
+
+        }
+    }
+
+    .radio-group{
+        @include clearfix();
+
+        text-align: center;
+        width: 60%;
+        margin: auto;
+        border: 2px solid palette(text, highlighted);
+
+        input{
+            display: none;
+
+            &:checked + label{
+                background: palette(text, highlighted);
+            }
+        }
+
+        label{
+            display: block;
+            padding: 1rem;
+        }
+    }
+
+    .form-radio-control{
+        display: inline-block;
+        width: 50%;
+    }
+
+    .select-group{
+        @extend .form-control;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            right: .5rem;
+            bottom: 0;
+            transform: rotate(45deg);
+
+            width: 0;
+            height: 0;
+
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid palette(text, highlighted);
+        }
+
+        .selected{
+            color: palette(text, highlighted);
+            display: inline-block;
+            margin-left: 5px;
+        }
+    }
+
+    .slider-group{
+        background: palette(gray, light);
+        padding: 3rem;
+
+        height: 156px;
+
+        p{
+            text-align: center;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .radial-progress{
+            margin: auto;
+        }
+
+        .label-without-selected-value{
+            display: block;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+
+        .label-with-selected-value{
+            margin: 2rem 2rem 3rem 4rem;
+        }
+
+        .slider-selected-value{
+            // transition: color .3s;
+            span{
+                font-family: $bold-font;
+                font-size: $font-size-large;
+            }
+
+            // @for $j from 1 through 10 {
+            //     $indexBackgroundColor: $j * 10;
+            //     $_bg-color: map-get($scoring-bg-colors, $indexBackgroundColor);
+
+            //     .score-#{$indexBackgroundColor}{
+            //         color: $_bg-color;
+            //     }
+            // }
+        }
+    }
+
+    @include breakpoint($bp-small-width){
+        .slider-group{
+            padding: 2rem;
+            padding-top: 3rem;
+        }
+    }
+
+    .checkbox-group{
+        @include clearfix();
+
+        .checkbox-group-item{
+            width: 48%;
+            margin-bottom: 1rem;
+            text-align: center;
+
+            float: left;
+
+            &:nth-child(2n+0) {
+                float: right;
+            }
+
+            label{
+                color: palette(text, main);
+                text-transform: capitalize;
+                padding: .8rem;
+                width: 100%;
+
+                padding: .8rem;
+                border-radius: 3px;
+
+                font-size: $font-size-msmall;
+
+                background: palette(gray, light);
+            }
+
+            input{
+                display: none;
+
+                &:checked + label{
+                    background: palette(text, highlighted);
+                    color: palette(text, white);
+                }
+            }
+        }
+    }
+
+    .autocomplete{
+      z-index: 9999;
+
+      input{
+        @extend .form-control;
+      }
+    }
+}

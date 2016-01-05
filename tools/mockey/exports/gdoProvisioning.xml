@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mockservice version="1.0" xml:lang="en-US">
+<proxy_settings proxy_enabled="false" proxy_url=""/>
+<service default_real_url_index="0" default_scenario_id="1" description="" error_scenario_id="null" hang_time="0" name="compGateways" request_inspector_name="null" service_response_type="1" tag="" url="v1/kcd/provision/gateway/location/{locationId}/forSmartId/{smartId}/v2">
+<request_inspector_json_rules enable_flag="false"/>
+<response_schema enable_flag="false"/>
+<scenario http_resp_status_code="200" id="1" name="success" tag="">
+<scenario_match scenario_match_evaluation_rules_flag="false"/>
+<scenario_response><![CDATA[[
+    {
+        "model_Name": "Chamberlain",
+        "smartId": "021923498932",
+        "name": "Garage Gateway",
+        "addedOn": "1394735247383"
+    }
+]]]></scenario_response>
+<scenario_response_header/>
+</scenario>
+</service>
+<service default_real_url_index="0" default_scenario_id="1" description="" error_scenario_id="null" hang_time="0" name="ProductCreate" request_inspector_name="null" service_response_type="1" tag="" url="v1/kcd/provision/product/register/v2">
+<request_inspector_json_rules enable_flag="false"/>
+<response_schema enable_flag="false"/>
+<scenario http_resp_status_code="200" id="1" name="success" tag="">
+<scenario_match scenario_match_evaluation_rules_flag="false"/>
+<scenario_response><![CDATA[{
+    "success": "true"
+}]]></scenario_response>
+<scenario_response_header/>
+</scenario>
+</service>
+</mockservice>

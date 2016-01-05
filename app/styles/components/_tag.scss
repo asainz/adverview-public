@@ -1,0 +1,21 @@
+.tags{
+    
+
+    .tag{
+        color: palette(text, highlighted);
+        font-size: $font-size-normal;
+        text-transform: uppercase;
+
+        display: inline-block;
+
+        &:after{
+            content: "/";
+            margin: 0 1rem;
+        }
+
+        &:last-child:after{
+            content: "";
+            margin: 0;
+        }
+    }
+}

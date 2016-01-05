@@ -1,0 +1,77 @@
+//original code
+//http://codepen.io/asainz/pen/emGEqN
+
+.radial-progress {
+  display: block;
+  border-radius: 100%;
+  position: relative;
+  
+  transform: rotate(-90deg);
+
+  .circle {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    stroke: palette(gray, progressRadial);
+    stroke-width: .7px;
+    
+  }
+
+  .value-stroke {
+    // 147 is aproximatelly the circunference of the circle we're using.
+    // It is used to get the circle originally without any line, and the it is
+    // animated to the correct value
+    stroke-dashoffset: 147;
+    stroke-width: 3px;
+  }
+
+    // add background colors based on the class (progress-10 to progress-90)
+    @for $j from 1 through 10{
+      $indexBackgroundColor: $j * 10;
+      $_bg-color: map-get($scoring-bg-colors, $indexBackgroundColor);
+
+      &.progress-color-#{$indexBackgroundColor}{
+        .value-stroke {
+          stroke: $_bg-color;
+        }
+        .progress-radial-label {
+          color: $_bg-color;
+        }
+      }
+    }
+
+  .progress-radial-content{
+    position: relative;
+
+    .progress-radial-label {
+      position: absolute;
+      text-align: center;
+      border-radius: 100%;
+      font-size: $font-size-medium;
+      font-family: $bold-font;
+      
+      transform: rotate(90deg);
+
+      color: palette(text, black);
+    }
+  }
+
+  svg{
+    overflow: visible;
+  }
+
+}
+
+// firefox seems to have a bug with a rotate of 90deg or -90deg. It just displays 
+// it as 0deg.
+.firefox{
+  .radial-progress{
+    transform: rotate(-89deg);
+
+    .progress-radial-content{
+
+      .progress-radial-label {
+        transform: rotate(91deg);
+      }
+    }
+  }
+}

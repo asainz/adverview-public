@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Really Simple HTML Email Template</title>
+<style>
+/* -------------------------------------
+        GLOBAL
+------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
+    font-family: sans-serif;
+    font-size: 100%;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: none;
+    width: 100%!important;
+    height: 100%;
+}
+
+
+/* -------------------------------------
+        ELEMENTS
+------------------------------------- */
+a {
+    color: #348eda;
+}
+
+.btn-primary {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #348eda;
+    border: solid #348eda;
+    border-width: 10px 20px;
+    line-height: 2;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.btn-secondary {
+    text-decoration: none;
+    color: #FFF;
+    background-color: #aaa;
+    border: solid #aaa;
+    border-width: 10px 20px;
+    line-height: 2;
+    font-weight: bold;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.last {
+    margin-bottom: 0;
+}
+
+.first {
+    margin-top: 0;
+}
+
+.padding {
+    padding: 10px 0;
+}
+
+.logo-row{
+    margin: 0 0 30px 0;
+}
+
+/* -------------------------------------
+        BODY
+------------------------------------- */
+table.body-wrap {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* -------------------------------------
+        FOOTER
+------------------------------------- */
+table.footer-wrap {
+    width: 100%;    
+    clear: both!important;
+}
+
+.footer-wrap .container p {
+    font-size: 12px;
+    color: #666;
+    
+}
+
+/* -------------------------------------
+        TYPOGRAPHY
+------------------------------------- */
+h1, h2, h3 {
+    /*font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+    font-family: sans-serif;
+    color: #248EBB;
+    margin: 20px 0 10px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+a,
+a:visited,
+a:active{
+    color: #248EBB;
+}
+
+h1 {
+    font-size: 21px;
+}
+h2 {
+    font-size: 28px;
+}
+h3 {
+    font-size: 22px;
+}
+
+p, ul, ol {
+    margin-bottom: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #545A5C;
+}
+
+ul li, ol li {
+    margin-left: 5px;
+    list-style-position: inside;
+}
+
+li{
+    list-style-type: disc;
+}
+
+/* ---------------------------------------------------
+        RESPONSIVENESS
+        Nuke it from orbit. It's the only way to be sure.
+------------------------------------------------------ */
+
+/* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+.container {
+    display: block!important;
+    max-width: 600px!important;
+    margin: 0 auto!important; /* makes it centered */
+    clear: both!important;
+}
+
+/* Set the padding on the td rather than the div for Outlook compatibility */
+.body-wrap .container {
+    padding: 20px;
+}
+
+/* This should also be a block element, so that it will fill 100% of the .container */
+.content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Let's make sure tables in the content area are 100% wide */
+.content table {
+    width: 100%;
+}
+
+</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<!-- body -->
+<table class="body-wrap" bgcolor="#FFFFFF">
+    <tr>
+        <td></td>
+        <td class="container" bgcolor="#F7F7F7">
+
+            <!-- content -->
+            <div class="content">
+            <table>
+                <tr>
+                    <td align="center">
+                        <a target="_blank" href="https://adverview.com">
+                            <img class="logo-row" src="https://adverview.com/email-templates/images/mailing-logo.png" alt="adverview logo" />
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Hola, {NOMBRE}!</p>
+
+                        <p>Gracias por sumarte a <strong>AdverView</strong>, la comunidad independiente de la industria publicitaria.</p>
+
+                        <h1>¿Cuál es la idea?</h1>
+
+                        <p>Compartir un poco lo que opinamos sobre las agencias para las que trabajamos y las cosas que nos importan del día a día: sueldos, crecer profesionalmente, pasarla bien con nuestros compañeros...</p>
+
+                        <p>Todos los que trabajamos para la industria publicitaria tenemos varias cosas en común, y está bueno compartirlo.</p>
+
+                        <h1>¿Qué podés hacer?</h1>
+                        
+                        <ol>
+                            <li><p>Contanos tu experiencia de trabajar en {AGENCIA} para que aquellos que se sumen sepan realmente como se vive ahí adentro.</p></li>
+                            <li><p>
+                                <a href="https://adverview.com/agencias-de-publicidad-en-argentina">Seguí a una agencia para recibir las opiniones de quienes trabajan en ellas</a>
+                            </p></li>
+                            <li><p>
+                                <a href="https://adverview.com/sueldos-en-argentina">¿Estás conforme con tu sueldo? Fijate cuanto ganan compañeros de AdverView.</a>
+                            </p></li>
+                        </ol>
+
+                        <p>Estamos empezando, así que cualquier opinión nos suma :) Mandanos un mail a <a href="mailto:hola@adverview.com">hola@adverview.com</a> o seguinos en nuestras redes sociales.</p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="footer-wrap">
+                <tr>
+                    <td></td>
+                    <td class="container">
+                        
+                        <!-- content -->
+                        <div class="content">
+                            <table>
+                                <tr>
+                                    <td class="padding" align="center">
+                                        <div>
+                                            <a target="_blank" href="https://www.facebook.com/adverview"><img src="https://adverview.com/email-templates/images/facebook.png" alt="facebook icon" /></a>
+                                            <a target="_blank" href="https://twitter.com/"><img src="https://adverview.com/email-templates/images/twitter.png" alt="twitter icon" /></a>
+                                            <a target="_blank" href="https://plus.google.com/"><img src="https://adverview.com/email-templates/images/gplus.png" alt="google plus icon" /></a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <td align="center">
+                                        <p>No te interesa? <a href="#">A spam entonces!</a> :(</p>
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- /content -->
+                        
+                    </td>
+                    <td></td>
+                </tr>
+                </table>
+            </div>
+            <!-- /content -->
+            
+        </td>
+        <td></td>
+    </tr>
+</table>
+<!-- /body -->
+
+</body>
+</html>

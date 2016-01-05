@@ -1,0 +1,70 @@
+.autocomplete{
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+
+    &.autocomplete-visible{
+        z-index: $screen-blocker-z-index + 10;
+    }
+
+    // input{
+    //     width: 100%;
+    //     padding:0.4em;
+    // }
+
+    ul{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        border-left: 1px solid palette(gray);
+        border-right: 1px solid palette(gray);
+        border-bottom: 1px solid palette(gray);
+        z-index: 1;
+
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    li{
+        text-align: left;
+        list-style:none;
+        width: 100%;
+        padding:0.4em;
+        background-color: palette(white);
+        color: palette(text, black);
+
+        &.active{
+            background-color: palette(text, highlighted)
+        }
+
+        // Don't want to highlight th part of the string that directly matches
+        // the search text.
+        // .highlight{
+        //     background-color: palette(gray, lightest);
+
+        //     &.active{
+        //         background: palette(gray);
+        //         color: palette(text, white);
+        //     }
+        // }
+    }
+}
+
+.form-block{
+    .autocomplete{
+        position: static;
+
+        ul{
+            position: static;
+            border: none;
+        }
+
+        li{
+            background-color: palette(gray, light);
+
+            &.active{
+                background-color: palette(text, highlighted)
+            }
+        }
+    }
+}

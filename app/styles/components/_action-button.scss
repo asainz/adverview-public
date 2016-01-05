@@ -1,0 +1,43 @@
+.action-button{
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: $default-padding-for-containers 0;
+    color: palette(gray, light);
+
+    text-transform: uppercase;
+
+    &.main-action-button{
+        // main blue
+        color: palette(text, white);
+        background: palette(text, highlighted);
+    }
+
+    &.inline-action-button{
+        padding: .5rem;
+        border-radius: .25rem;
+        font-size: $font-size-msmall;
+        margin-right: .5rem;
+        width: auto;
+    }
+
+    &.submit-action-button{
+        @extend .main-action-button;
+        position: relative;
+
+        text-align: left;
+        padding-left: 1rem;
+
+        .icon-submit-action-button{
+            position: absolute;
+            top: 5px;
+            right: 1rem;
+
+            transform: rotate(-90deg);
+        }
+    }
+
+    &[disabled="disabled"]{
+        opacity: .5;
+    }
+}

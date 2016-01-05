@@ -1,0 +1,149 @@
+.banner{
+    @extend %vertical-centered-parent;
+    $image-shade-z-index: 10;
+
+    position: relative;
+    height: $banner-height;
+
+    background: $banner-color-base-background;
+    background-size: cover;
+
+    &.banner-agency{
+        padding: 22px 0;
+        color: palette(text, white);
+
+        .agency-details-block{
+            position: relative;
+            z-index: $image-shade-z-index + 1;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            background: shade(black, seventy);
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: $image-shade-z-index;
+        }
+
+        .radial-progress{
+            .circle:not(.value-stroke){
+                stroke: palette(white);
+            }
+
+            .progress-radial-label{
+                color: palette(text, white);
+            }
+        }
+    }
+
+    &.banner-agencies{
+        .banner-content{
+            text-align: right;
+        }
+    }
+
+    &.banner-add-agency{
+        font-size: $font-size-medium;
+
+        .disclaimer{
+            font-size: $font-size-small;
+
+            span{
+                font-size: 1em;
+            }
+        }
+    }
+
+    &.banner-all-reviews,
+    &.banner-add-agency{
+        .banner-content{
+            footer{
+                margin-top: 20px;
+            }
+        }
+    }
+
+    &.banner-average-salary{
+        .banner-content{
+            bottom: 5rem;
+        }
+    }
+
+    &.banner-autocomplete{
+      .banner-content{
+        margin-bottom: -20px;
+      }
+    }
+
+    .banner-content{
+        white-space: initial;
+        color: palette(text, white);
+
+        width: 100%;
+        padding: 0 1rem;
+
+        text-align: center;
+
+        &> span{
+            display: inline-block;
+            margin: .5rem 0;
+
+        }
+
+        .banner-reviews-counter{
+            font-family: $bold-font;
+        }
+
+        .banner-icon{
+            margin-right: 10px;
+            margin-top: 7px;
+        }
+    }
+
+    .banner-searchbox{
+        .banner-searchbox-icon{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 0 1rem;
+            border: 1px solid shade(black);
+
+            > span{
+                display: block;
+            }
+        }
+
+        input{
+            background: shade(transparent, full);
+            border: 1px solid shade(white);
+
+            width: 100%;
+            padding: .5rem 1rem;
+        }
+
+        ::-webkit-input-placeholder {
+           color: inherit;
+        }
+
+        :-moz-placeholder { /* Firefox 18- */
+           color: inherit;
+        }
+
+        ::-moz-placeholder {  /* Firefox 19+ */
+           color: inherit;
+        }
+
+        :-ms-input-placeholder {
+           color: inherit;
+        }
+    }
+
+    .disclaimer{
+        font-size: $font-size-small;
+        font-style: italic;
+    }
+}

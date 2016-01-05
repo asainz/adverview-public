@@ -1,0 +1,23 @@
+<div class="select-list-container" ng-show="visible">
+    <div>
+        <ul id="selectList" ng-click="handleClickOnListBackground($event)" class="select-list">
+            <div class="select-list-options">
+                <li
+                    ng-repeat="option in options"
+                    class="select-list-option"
+                    ng-class="{'selected': $index === selectedIndex}"
+                >
+                    <input
+                        type="radio"
+                        name="inputSelectList"
+                        id="inputSelectList{{$index}}"
+                        ng-model="selectedIndex"
+                        value="{{$index}}"
+                        ng-change="handleSelection($index)"
+                    />
+                    <label for="inputSelectList{{$index}}">{{option}}</label>
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,3 @@
+@mixin apply-default-padding-for-container(){
+    padding: $default-padding-for-containers*1.5 $default-padding-for-containers;
+}

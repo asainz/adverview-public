@@ -1,0 +1,49 @@
+<div class="page page-reviews">
+    <banner background-image="bannerBackgroundImage" class="banner-add-agency banner-all-reviews">
+        <div class="banner-content">
+            <span>{{bannerText}}</span>
+
+            <div>
+                <button
+                    class="action-button inline-action-button main-action-button"
+                    ng-click="goToAgenciesList()"
+                >opiná</button>
+            </div>
+
+            <footer>
+                <p class="disclaimer">
+                    <span class="icon-info-full"></span>
+                    Tus opiniones son totalmente confidenciales
+                </p>
+            </footer>
+        </div>
+    </banner>
+
+    <div class="ranking-header" ng-click="showFilterOptions()">
+        <div><h2>{{selectedFilterOption}}</h2></div>
+        <span class="icon-custom-chevron-down"></span>
+    </div>
+
+    <div class="reviews list" ng-show="reviews">
+        <review-details-block
+            ng-repeat="review in reviews"
+            ng-class-even="'even-row'"
+            ng-click="goToDetails(review)"
+            review="review"
+            is-details-page="false"
+            show-agency-name="true"
+        ></review-details-block>
+
+        <load-more-content
+            handle-click="loadMore"
+            items="reviews"
+            total-items="totalReviews"
+        ></load-more-content>
+    </div>
+
+    <div class="list" ng-hide="reviews">
+        <div class="list-loading-items">
+            <icon name="oval-spinner" size="small" color="blue"></icon>
+        </div>
+    </div>
+</div>

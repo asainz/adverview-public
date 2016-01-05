@@ -1,0 +1,11 @@
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+@function shade($shade, $tone: 'fifty') {
+  @return map-get(map-get($shades, $shade), $tone);
+}
+
+@function score($value) {
+  @return map-get($scoring-bg-colors, $value);
+}

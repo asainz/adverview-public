@@ -1,0 +1,22 @@
+<div class="form-group" ng-class="{'has-error': hasErrors}">
+
+    <label class="control-label">{{control.label}}</label>
+
+    <div class="radio-group">
+        
+        <div 
+            class="form-radio-control"
+            ng-repeat="option in control.options"
+        >
+            <input
+                id="{{control.name +  $index}}" 
+                type="radio" 
+                name="{{control.name}}"
+                ng-value="{{option.value}}"
+                ng-model="control.value"
+            />
+            <label for="{{control.name +  $index}}">{{option.label}}</label>
+        </div>
+
+    </div>
+</div>

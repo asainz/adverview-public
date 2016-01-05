@@ -1,0 +1,1941 @@
+[
+  {
+    "addedOn": "1392136616835",
+    "city": "Chicago",
+    "currentMode": "Home",
+    "gateways": [
+      {
+        "model_Name": "Chamberlain",
+        "smartId": "021923498932",
+        "publicSmartId": "021923498932",
+        "name": "Garage Gateway",
+        "addedOn": "1402951407655"
+      },
+      {
+        "model_Name": "KCD v0.1",
+        "smartId": "SG12131415161AB",
+        "publicSmartId": "SG12131415161",
+        "name": "Home Gateway",
+        "addedOn": "1402951407655"
+      }
+    ],
+    "name": "My Home",
+    "products": [
+      {
+        "gatewayId": "98e486de77eaabf101000077",
+        "productId": "98e486de77eaabf101000002",
+        "modelNumber": "10520002410",
+        "smartId": "KB422220091ED",
+        "publicSmartId": "KB422220091",
+        "name": "My Lamp",
+        "deviceId": "184550935",
+        "attributes": [
+          {
+            "label": "Switch",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "on": "ON",
+              "off": "OFF"
+            },
+            "defaultValue": "on",
+            "name": "mode"
+          },
+          {
+            "label": "Energy Consumption",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "integerRange": [
+              0,
+              100000,
+              1
+            ],
+            "name": "energyConsumption"
+          },
+          {
+            "label": "Power",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "integerRange": [
+              0,
+              100000,
+              1
+            ],
+            "name": "power"
+          },
+          {
+            "label": "Status",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "status"
+          },
+          {
+            "label": "Reset Energy Consumption",
+            "type": "enumeration",
+            "writable": true,
+            "readable": false,
+            "enumerationRange": {
+              "on": "ON"
+            },
+            "name": "resetEnergyConsumption"
+          }
+        ],
+        "routineAttributes": {
+          "mode": {
+            "label": "Switch",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "on": "ON",
+              "off": "OFF"
+            },
+            "defaultValue": "on",
+            "name": "mode"
+          }
+        },
+        "currentScheduleActive": false,
+        "modelType": "SmartPlug",
+        "model_Name": "SmartPlug 2 Pronged",
+        "addedOn": "2014-06-17T14:31:03.435Z",
+        "brand": "Kenmore",
+        "imageUrl": "http://example.com/default/smartPlug.png",
+        "manuals": [
+          {
+            "title": "Quick Start Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/1404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "smartPlugNotifications": [
+              {
+                "settings": {
+                  "messages": [],
+                  "active": false
+                },
+                "text": "SmartPlug Turns OFF",
+                "notificationId": "spu001"
+              }
+            ],
+            "name": null
+          },
+          {
+            "smartPlugControl": {
+              "value": "on"
+            },
+            "smartPlugNotifications": [
+              {
+                "settings": {
+                  "messages": [
+                    {
+                      "messageChannel": "023840932",
+                      "messageType": "push"
+                    }
+                  ],
+                  "active": true
+                },
+                "text": "SmartPlug Turns OFF",
+                "notificationId": "spu001"
+              }
+            ],
+            "name": "Home"
+          },
+          {
+            "smartPlugControl": {
+              "schedule": [
+                {
+                  "intervals": [
+                    {
+                      "value": "off",
+                      "start": "0:00"
+                    },
+                    {
+                      "value": "on",
+                      "start": "9:00"
+                    },
+                    {
+                      "value": "off",
+                      "start": "13:00"
+                    },
+                    {
+                      "value": "on",
+                      "start": "17:00"
+                    }
+                  ],
+                  "dayOfWeek": "Monday"
+                }
+              ]
+            },
+            "smartPlugNotifications": [
+              {
+                "settings": {
+                  "messages": [],
+                  "active": false
+                },
+                "text": "SmartPlug Turns OFF",
+                "notificationId": "spu001"
+              }
+            ],
+            "name": "Away"
+          }
+        ],
+        "roomName": "Joey's Bedroom"
+      },
+      {
+        "gatewayId": "98e486de77eaabf101000077",
+        "productId": "98e486de77eaabf101000003",
+        "modelNumber": "10520001410",
+        "smartId": "STS00000002GX",
+        "publicSmartId": "STS00000002",
+        "name": "Downstairs Thermostat",
+        "deviceId": "184549623",
+        "attributes": [
+          {
+            "label": "Fan",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "on": "On",
+              "auto": "Auto"
+            },
+            "name": "fan"
+          },
+          {
+            "label": "Hold Status",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "program": "Program",
+              "temporary": "Temporary",
+              "permanent": "Permanent",
+              "away": "Away"
+            },
+            "name": "holdStatus"
+          },
+          {
+            "label": "Status",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "status"
+          },
+          {
+            "label": "Mode",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "heat": "Heat",
+              "cool": "Cool",
+              "off": "Off",
+              "auto": "Auto",
+              "emergencyHeat": "Emergency Heat"
+            },
+            "name": "mode"
+          },
+          {
+            "label": "Temperature Mode",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "heat": "Heat",
+              "cool": "Cool",
+              "off": "Off",
+              "emergencyHeat": "Emergency Heat"
+            },
+            "name": "temperatureMode"
+          },
+          {
+            "label": "Operating Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "heat": "Heat",
+              "cool": "Cool",
+              "off": "Off"
+            },
+            "name": "operatingStatus"
+          },
+          {
+            "label": "Control Lock",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "on": "On",
+              "off": "Off"
+            },
+            "name": "controlLock"
+          },
+          {
+            "label": "Cool Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              41,
+              95,
+              1
+            ],
+            "defaultValue": 75,
+            "name": "coolTemp"
+          },
+          {
+            "label": "Heat Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              41,
+              95,
+              1
+            ],
+            "defaultValue": 65,
+            "name": "heatTemp"
+          },
+          {
+            "label": "Away Cool Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              0,
+              99,
+              1
+            ],
+            "name": "awayCoolTemp"
+          },
+          {
+            "label": "Away Heat Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              0,
+              99,
+              1
+            ],
+            "name": "awayHeatTemp"
+          },
+          {
+            "label": "Room Temperature",
+            "type": "temperature",
+            "writable": false,
+            "readable": true,
+            "temperatureRange": [
+              -10,
+              120,
+              1
+            ],
+            "name": "roomTemp"
+          },
+          {
+            "label": "Humidity",
+            "type": "percentage",
+            "writable": false,
+            "readable": true,
+            "percentageRange": [
+              20,
+              90,
+              1
+            ],
+            "name": "humidity"
+          },
+          {
+            "label": "Battery Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "low": "Low",
+              "good": "Good"
+            },
+            "name": "batteryStatus"
+          },
+          {
+            "label": "Reset Filter",
+            "type": "enumeration",
+            "writable": true,
+            "readable": false,
+            "enumerationRange": {
+              "300": "300",
+              "500": "500",
+              "700": "700"
+            },
+            "name": "resetFilter"
+          },
+          {
+            "label": "HVAC Code",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "hvacCode"
+          },
+          {
+            "label": "HVAC Description",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "hvacDescription"
+          },
+          {
+            "label": "Error Code",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "errorCode"
+          }
+        ],
+        "routineAttributes": {
+          "heatTemp": {
+            "label": "Heat Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              41,
+              95,
+              1
+            ],
+            "defaultValue": 65,
+            "name": "heatTemp"
+          },
+          "coolTemp": {
+            "label": "Cool Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              41,
+              95,
+              1
+            ],
+            "defaultValue": 75,
+            "name": "coolTemp"
+          }
+        },
+        "currentSchedule": {
+          "Thursday": [
+            {
+              "controlValues": {
+                "coolTemp": 80,
+                "heatTemp": 70
+              },
+              "minute": 40,
+              "hour": 21
+            }
+          ],
+          "Sunday": [
+            {
+              "controlValues": {
+                "coolTemp": 80,
+                "heatTemp": 60
+              },
+              "minute": 40,
+              "hour": 6
+            }
+          ],
+          "Tuesday": [
+            {
+              "controlValues": {
+                "coolTemp": 80,
+                "heatTemp": 60
+              },
+              "minute": 50,
+              "hour": 9
+            }
+          ],
+          "Wednesday": [
+            {
+              "controlValues": {
+                "coolTemp": 80,
+                "heatTemp": 50
+              },
+              "minute": 0,
+              "hour": 23
+            }
+          ],
+          "Monday": [
+            {
+              "controlValues": {
+                "coolTemp": 80,
+                "heatTemp": 60
+              },
+              "minute": 42,
+              "hour": 7
+            }
+          ],
+          "Friday": [
+            {
+              "controlValues": {
+                "coolTemp": 80,
+                "heatTemp": 60
+              },
+              "minute": 45,
+              "hour": 0
+            }
+          ],
+          "Saturday": [
+            {
+              "controlValues": {
+                "coolTemp": 60,
+                "heatTemp": 55
+              },
+              "minute": 40,
+              "hour": 1
+            }
+          ]
+        },
+        "currentScheduleActive": true,
+        "modelType": "Thermostat",
+        "model_Name": "Thermostat",
+        "addedOn": "2014-06-17T14:31:03.435Z",
+        "brand": "Kenmore",
+        "imageUrl": "http://example.com/default/thermostat.png",
+        "manuals": [
+          {
+            "title": "Owners Manual",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/OWNM/1404495L.pdf"
+          },
+          {
+            "title": "Quick Start Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/1404497L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "Mom's Bedroom"
+      },
+      {
+        "gatewayId": "98e486de77eaabf101000077",
+        "productId": "98e486de77eaabf101000005",
+        "modelNumber": "25376120",
+        "smartId": "SAC00000014E9",
+        "publicSmartId": "SAC00000014",
+        "name": "Room Air Conditioner",
+        "deviceId": "184550750",
+        "attributes": [
+          {
+            "label": "Mode",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "cool": "Cool",
+              "heat": "Heat",
+              "fanOnly": "Fan Only",
+              "economy": "Economy"
+            },
+            "name": "mode"
+          },
+          {
+            "label": "Appliance State",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "cool": "Cool",
+              "heat": "Heat",
+              "fanOnly": "Fan Only",
+              "economy": "Economy",
+              "on": "On"
+            },
+            "name": "applianceState"
+          },
+          {
+            "label": "Fan Speed",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "low": "Low",
+              "medium": "Medium",
+              "high": "High",
+              "auto": "Auto"
+            },
+            "name": "fan"
+          },
+          {
+            "label": "Fan Speed Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "low": "Low",
+              "medium": "Medium",
+              "high": "High"
+            },
+            "name": "fanSpeedStatus"
+          },
+          {
+            "label": "Sleep Mode",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On"
+            },
+            "name": "sleepMode"
+          },
+          {
+            "label": "Temperature Setting",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              60,
+              90,
+              1
+            ],
+            "name": "temperatureSetting"
+          },
+          {
+            "label": "Room Temperature",
+            "type": "temperature",
+            "writable": false,
+            "readable": true,
+            "temperatureRange": [
+              0,
+              99,
+              1
+            ],
+            "name": "roomTemp"
+          },
+          {
+            "label": "Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "offline": "Offline",
+              "online": "Online"
+            },
+            "name": "status"
+          },
+          {
+            "label": "Filter Status",
+            "type": "enumeration",
+            "writable": true,
+            "readable": false,
+            "enumerationRange": {
+              "normal": "Normal",
+              "needToChange": "Need to change"
+            },
+            "name": "filterStatus"
+          },
+          {
+            "label": "Temparature Units",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "fahrenheit": "Fahrenheit",
+              "celsius": "Celsius"
+            },
+            "name": "temperatureUnit"
+          },
+          {
+            "label": "Error Code",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "noError": "No Error",
+              "as": "AS",
+              "hs": "HS",
+              "es": "ES",
+              "cs": "CS",
+              "os": "OS"
+            },
+            "name": "errorCode"
+          }
+        ],
+        "routineAttributes": {
+          "mode": {
+            "label": "Mode",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "cool": "Cool",
+              "heat": "Heat",
+              "fanOnly": "Fan Only",
+              "economy": "Economy"
+            },
+            "name": "mode"
+          }
+        },
+        "currentScheduleActive": false,
+        "modelType": "RoomAirConditioner",
+        "model_Name": "RoomAirConditioner",
+        "addedOn": "2014-06-17T14:31:03.435Z",
+        "brand": "Kenmore",
+        "imageUrl": "http://example.com/default/rac.png",
+        "manuals": [
+          {
+            "title": "Quick Start Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/5404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "Kitchen"
+      },
+      {
+        "gatewayId": "98e486de77eaabf101000077",
+        "productId": "98e486de77eaabf101000007",
+        "modelNumber": "7957406",
+        "smartId": "SW63333333LDG",
+        "publicSmartId": "SW63333333L",
+        "name": "Refrigerator",
+        "deviceId": "184551944",
+        "attributes": [
+          {
+            "label": "Air filter status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "needToChange": "Need to change",
+              "normal": "Normal"
+            },
+            "defaultValue": "normal",
+            "name": "airFilterStatus"
+          },
+          {
+            "label": "Water filter status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "needToChange": "Need to change",
+              "normal": "Normal"
+            },
+            "defaultValue": "normal",
+            "name": "waterFilterStatus"
+          },
+          {
+            "label": "Control Lock Status",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "lock": "Locked",
+              "unlock": "Unlocked"
+            },
+            "name": "controlLock"
+          },
+          {
+            "label": "Device Current DR Mode",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "normal": "Normal",
+              "delayApplianceLoad": "Delay Appliance Load",
+              "temporaryApplianceModeReduction": "Temporary Appliance Load Reduction"
+            },
+            "name": "deviceDRMode"
+          },
+          {
+            "label": "Device DR Compliance",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "notComplying": "Not Complying",
+              "complying": "Complying"
+            },
+            "name": "deviceDRCompliance"
+          },
+          {
+            "label": "Device DR Reason Code",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "complying": "Complying",
+              "userOverride": "User Override",
+              "deviceOverride": "Device Override"
+            },
+            "name": "deviceDRReason"
+          },
+          {
+            "label": "Door Alarm",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "doorClosed": "Door Closed",
+              "doorOpenAlarming": "Door Open/Alarming"
+            },
+            "name": "doorAlarm"
+          },
+          {
+            "label": "Door Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "doorClosed": "Door Closed",
+              "doorOpen": "Door Open"
+            },
+            "name": "doorStatus"
+          },
+          {
+            "label": "Watt Hours of Energy Consumed",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "energyConsumption"
+          },
+          {
+            "label": "Error Code",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "errorCode"
+          },
+          {
+            "label": "Temperature Ambient",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "name": "temperatureAmbient"
+          },
+          {
+            "label": "Water Pressure",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "name": "waterPressure"
+          },
+          {
+            "label": "Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "offline": "Offline",
+              "online": "Online"
+            },
+            "name": "status"
+          },
+          {
+            "label": "Power Outage",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "powerOutage"
+          },
+          {
+            "label": "Freezer Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              -6,
+              8,
+              1
+            ],
+            "defaultValue": 0,
+            "name": "freezerTemperature"
+          },
+          {
+            "label": "Refrigerator Temperature",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              33,
+              46,
+              1
+            ],
+            "defaultValue": 0,
+            "name": "refrigeratorTemperature"
+          },
+          {
+            "label": "Speed Chill Status",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "speedChillStatus"
+          },
+          {
+            "label": "Temparature Units",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "fahrenheit": "Fahrenheit",
+              "celsius": "Celsius"
+            },
+            "name": "temperatureUnit"
+          },
+          {
+            "label": "Ice Maker Status",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On",
+              "ultraIce": "Ultra Ice"
+            },
+            "name": "iceMaker"
+          }
+        ],
+        "routineAttributes": {
+          "controlLock": {
+            "label": "Control Lock Status",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "lock": "Locked",
+              "unlock": "Unlocked"
+            },
+            "name": "controlLock"
+          }
+        },
+        "currentScheduleActive": false,
+        "modelType": "Refrigerator",
+        "model_Name": "Refrigerator",
+        "addedOn": "2014-06-17T14:31:03.435Z",
+        "brand": "LG",
+        "imageUrl": "http://example.com/default/refrigerator.png",
+        "manuals": [
+          {
+            "title": "Quick Start Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/5404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "Kitchen"
+      },
+      {
+        "gatewayId": "98e486de77eaabf101000077",
+        "productId": "98e486de77eaabf101000008",
+        "modelNumber": "7964198",
+        "smartId": "SW63333337R89",
+        "publicSmartId": "SW63333337R",
+        "name": "Washer",
+        "deviceId": "184552114",
+        "attributes": [
+          {
+            "label": "Appliance State",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "programmingMode": "Programming Mode",
+              "running": "Running",
+              "pause": "Pause",
+              "complete": "Complete",
+              "stop": "Stop",
+              "start": "Start"
+            },
+            "name": "applianceState"
+          },
+          {
+            "label": "Control Lock Status",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "locked": "Locked",
+              "unlocked": "Unlocked"
+            },
+            "name": "controlLock"
+          },
+          {
+            "label": "Cycle Energy Consumption",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "integerRange": [
+              0,
+              100000,
+              1
+            ],
+            "name": "cycleEnergyConsumption"
+          },
+          {
+            "label": "Cycle Name",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "noCycle": "No Cycle",
+              "refresh": "Refresh",
+              "sanitize": "sanitize",
+              "Sanitize": "Sanitize",
+              "allegycare": "Allegycare",
+              "bulky": "Bulky",
+              "permPress": "Perm Press",
+              "normal": "Normal | Casual",
+              "heavyDuty": "Heavy Duty",
+              "whitestWhites": "Whitest whites",
+              "coldClean": "Cold Clean",
+              "delicates": "Delicates",
+              "handWash": "Hand Wash",
+              "expressWash": "Express Wash",
+              "tubClean": "Tub Clean",
+              "towels": "Towels",
+              "smallLoad": "Small Load",
+              "rinseSpin": "RinseSpin",
+              "rugged": "Rugged",
+              "kidsWear": "Kids Wear",
+              "workoutWear": "Workout Wear",
+              "drainSpin": "DrainSpin",
+              "sportsWears": "Sports Wears",
+              "comforter": "Comforter"
+            },
+            "name": "cycleName"
+          },
+          {
+            "label": "Cycle State",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "complete": "Complete",
+              "loadSensing": "Load Sensing",
+              "wash": "Wash",
+              "rinse": "Rinse",
+              "spin": "Spin",
+              "stayFresh": "StayFresh",
+              "delayed": "Delayed"
+            },
+            "name": "cycleState"
+          },
+          {
+            "label": "Device Current DR Mode",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "normal": "Normal",
+              "delayApplianceLoad": "Delay Appliance Load",
+              "temporaryApplianceModeReduction": "Temporary Appliance Load Reduction"
+            },
+            "name": "deviceCurrentDRMode"
+          },
+          {
+            "label": "Device DR Compliance",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "notComplying": "Not Complying",
+              "complying": "Complying"
+            },
+            "name": "deviceDRCompliance"
+          },
+          {
+            "label": "Device DR Reason Code",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "complying": "Complying",
+              "userOverride": "User Override",
+              "deviceOverride": "Device Override"
+            },
+            "name": "deviceDRReason"
+          },
+          {
+            "label": "Error Code",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "errorCode"
+          },
+          {
+            "label": "Estimated Time Remaining",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "name": "estimatedTimeRemaining"
+          },
+          {
+            "label": "Maintenance Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "name": "maintenanceStatus"
+          },
+          {
+            "label": "Odometer",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "name": "odometer"
+          },
+          {
+            "label": "Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "offline": "Offline",
+              "online": "Online"
+            },
+            "name": "status"
+          },
+          {
+            "label": "Remote Control Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "disabled": "Disabled",
+              "enabled": "Enabled"
+            },
+            "name": "remoteControlStatus"
+          },
+          {
+            "label": "Stay Fresh",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On"
+            },
+            "name": "stayFresh"
+          },
+          {
+            "label": "Soil Level",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "noSoil": "No_Soil",
+              "light": "Light",
+              "lightNormal": "Light_Normal",
+              "normal": "Normal",
+              "normalHeavy": "Normal_Heavy",
+              "heavy": "Heavy"
+            },
+            "name": "soilLevel"
+          },
+          {
+            "label": "Spin Speed Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "noSelected": "No selected",
+              "noSpin": "No Spin(Drain only)",
+              "low": "Low",
+              "medium": "Medium",
+              "high": "High",
+              "extraHigh": "Extra High"
+            },
+            "name": "spinSpeedStatus"
+          },
+          {
+            "label": "Steam Option Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On"
+            },
+            "name": "steamOptionStatus"
+          },
+          {
+            "label": "Temperature Setting",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "tapCold": "Tap Cold",
+              "cold": "Cold",
+              "warm": "Warm",
+              "hot": "Hot",
+              "extraHot": "Extra Hot",
+              "invalid": "invalid"
+            },
+            "name": "temperatureSetting"
+          }
+        ],
+        "routineAttributes": {
+          "controlLock": {
+            "label": "Control Lock Status",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "locked": "Locked",
+              "unlocked": "Unlocked"
+            },
+            "name": "controlLock"
+          }
+        },
+        "currentScheduleActive": false,
+        "modelType": "Washer",
+        "model_Name": "Washer",
+        "addedOn": "2014-06-17T14:31:03.435Z",
+        "brand": "LG",
+        "imageUrl": "http://example.com/default/washer.png",
+        "manuals": [
+          {
+            "title": "Quick Start Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/5404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "Kitchen"
+      },
+      {
+        "gatewayId": "98e486de77eaabf101000077",
+        "productId": "98e486de77eaabf101000009",
+        "modelNumber": "7968198",
+        "smartId": "SW6333333BM99",
+        "publicSmartId": "SW6333333BM",
+        "name": "Dryer",
+        "deviceId": "184552324",
+        "attributes": [
+          {
+            "label": "Air Flow Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "good": "Good",
+              "check": "Check",
+              "poor": "Poor"
+            },
+            "name": "airFlowStatus"
+          },
+          {
+            "label": "Appliance State",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "programmingMode": "Programming Mode",
+              "running": "Running",
+              "pause": "Pause",
+              "complete": "Complete",
+              "stop": "Stop",
+              "start": "Start"
+            },
+            "name": "applianceState"
+          },
+          {
+            "label": "Control Lock Status",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "locked": "Locked",
+              "unlocked": "Unlocked"
+            },
+            "name": "controlLock"
+          },
+          {
+            "label": "Cycle Energy Consumption",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "integerRange": [
+              0,
+              100000,
+              1
+            ],
+            "name": "cycleEnergyConsumption"
+          },
+          {
+            "label": "Cycle Name",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "noCycle": "No cycle",
+              "heavyDuty": "Heavy Duty",
+              "towel": "Towel",
+              "normal": "Normal",
+              "casual": "Casual",
+              "delicate": "Delicate",
+              "ultraDelicate": "Ultra Delicate",
+              "bulky": "Bulky",
+              "sanitize": "Sanitize",
+              "smallLoad": "Small Load",
+              "khakiJean": "Khaki Jean",
+              "workoutWear": "Workout Wear",
+              "kidWear": "Kid Wear",
+              "eco": "Eco",
+              "bulkyComforter": "Bulky Comforter",
+              "wool": "Wool",
+              "expressDry": "Express Dry",
+              "airDry": "Air Dry",
+              "timeDry": "Time Dry",
+              "rackDry": "Rack Dry",
+              "spotCleaning": "Spot Cleaning",
+              "steamRefresh": "Steam Refresh",
+              "steamSanitary": "Steam Sanitary",
+              "touchUp": "Touch Up",
+              "mistFresh": "Mist Fresh",
+              "superDry": "Super Dry"
+            },
+            "name": "cycleName"
+          },
+          {
+            "label": "Cycle State",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "complete": "Complete",
+              "drying": "Drying",
+              "cooling": "Cooling",
+              "wrinkleGuard": "Wrinkle Guard"
+            },
+            "name": "cycleState"
+          },
+          {
+            "label": "Device Current DR Mode",
+            "type": "string",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "normal": "Normal",
+              "delayApplianceLoad": "Delay Appliance Load",
+              "temporaryApplianceModeReduction": "Temporary Appliance Load Reduction"
+            },
+            "name": "deviceCurrentDRMode"
+          },
+          {
+            "label": "Device DR Compliance",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "notComplying": "Not Complying",
+              "complying": "Complying"
+            },
+            "name": "deviceDRCompliance"
+          },
+          {
+            "label": "Device DR Reason Code",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "complying": "Complying",
+              "userOverride": "User Override",
+              "deviceOverride": "Device Override"
+            },
+            "name": "deviceDRReason"
+          },
+          {
+            "label": "Dry Level Setting",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "notSelected": "Not Selected",
+              "dampDry": "Damp Dry",
+              "lessDry": "Less Dry",
+              "normalDry": "Normal Dry",
+              "moreDry": "More Dry",
+              "veryDry": "Very Dry"
+            },
+            "name": "dryLevelSetting"
+          },
+          {
+            "label": "Dry Time Setting",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "20Min": "20Min",
+              "30Min": "30Min",
+              "40Min": "40Min",
+              "50Min": "50Min",
+              "60Min": "60Min"
+            },
+            "name": "dryTimeSetting"
+          },
+          {
+            "label": "Error Code",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "errorCode"
+          },
+          {
+            "label": "Estimated Time Remaining",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "name": "estimatedTimeRemaining"
+          },
+          {
+            "label": "Odometer",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "name": "odometer"
+          },
+          {
+            "label": "Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "offline": "Offline",
+              "online": "Online"
+            },
+            "name": "status"
+          },
+          {
+            "label": "Remote Control Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "enabled": "Enabled",
+              "disabled": "Disabled"
+            },
+            "name": "remoteControlStatus"
+          },
+          {
+            "label": "Static Shield",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On"
+            },
+            "name": "staticShield"
+          },
+          {
+            "label": "Wrinkle Guard",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On"
+            },
+            "name": "wrinkleGuard"
+          },
+          {
+            "label": "Steam Option Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "on": "On"
+            },
+            "name": "steamOption"
+          },
+          {
+            "label": "Temperature Setting",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "low": "Low",
+              "lowMedium": "Low-Medium",
+              "medium": "",
+              "Medium": "mediumHigh",
+              "": "Medium-High",
+              "high": "High"
+            },
+            "name": "temperatureSetting"
+          },
+          {
+            "label": "Water Status",
+            "type": "enumeration",
+            "writable": false,
+            "readable": true,
+            "enumerationRange": {
+              "good": "Good",
+              "bad": "Bad"
+            },
+            "name": "waterStatus"
+          }
+        ],
+        "routineAttributes": {
+          "applianceState": {
+            "label": "Appliance State",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "programmingMode": "Programming Mode",
+              "running": "Running",
+              "pause": "Pause",
+              "complete": "Complete",
+              "stop": "Stop",
+              "start": "Start"
+            },
+            "name": "applianceState"
+          }
+        },
+        "currentScheduleActive": false,
+        "modelType": "Dryer",
+        "model_Name": "Dryer",
+        "addedOn": "2014-06-17T14:31:03.435Z",
+        "brand": "LG",
+        "imageUrl": "http://example.com/default/dryer.png",
+        "manuals": [
+          {
+            "title": "Quick Start Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/5404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "Kitchen"
+      }
+    ],
+    "roomList": [
+      "Living Room",
+      "Kitchen",
+      "Basement",
+      "Garage",
+      "Downstairs",
+      "Joey's Bedroom",
+      "Mom's Bedroom"
+    ],
+    "routines": [
+      {
+        "_id": "536c65b24f0263fa3be18340",
+        "name": "Home",
+        "products": []
+      },
+      {
+        "_id": "536c65b24f0263fa3be18341",
+        "name": "Away",
+        "products": []
+      },
+      {
+        "_id": "536c65b24f0263fa3be18342",
+        "name": "Sleep",
+        "products": []
+      },
+      {
+        "_id": "536c65b24f0263fa3be18343",
+        "name": "Vacation",
+        "products": []
+      }
+    ],
+    "state": "IL",
+    "users": [
+      {
+        "role": "primary",
+        "productIds": [
+          "98e486de77eaabf101000002"
+        ],
+        "productWhitelist": true
+      },
+      {
+        "userId": "5307cffa49c753a5af96f2bb",
+        "role": "primary",
+        "productIds": [
+          "98e486de77eaabf101000002"
+        ],
+        "productWhitelist": true
+      }
+    ],
+    "zipCode": "60602",
+    "locationId": "5306586d5a31db00008fd791",
+    "timeZone": "America/Chicago",
+    "accessRole": {
+      "role": "primary",
+      "productIds": [
+        "98e486de77eaabf101000002"
+      ],
+      "productWhitelist": true
+    }
+  },
+  {
+    "addedOn": "1398457082186",
+    "city": "Charlotte",
+    "currentMode": null,
+    "gateways": [
+      {
+        "model_Name": "arrayent",
+        "smartId": "SG36667899999",
+        "publicSmartId": "SG366678999",
+        "name": "gateway",
+        "gatewayId": "5361381c52ff0885242dfeca",
+        "addedOn": "1398879001684"
+      },
+      {
+        "model_Name": "arrayent",
+        "smartId": "SG31111111111",
+        "publicSmartId": "SG311111111",
+        "name": "gateway",
+        "gatewayId": "53613b9b52ff0885242dfecd",
+        "addedOn": "1398879001684"
+      },
+      {
+        "model_Name": "arrayent",
+        "smartId": "SGA2222222222",
+        "publicSmartId": "SGA22222222",
+        "name": "gateway",
+        "gatewayId": "537269230ff4dc294263cbec",
+        "addedOn": "1400006744958"
+      },
+      {
+        "model_Name": "arrayent",
+        "smartId": "SGA2333333333",
+        "publicSmartId": "SGA23333333",
+        "name": "gateway",
+        "gatewayId": "53726a970ff4dc294263cbf2",
+        "addedOn": "1400006744958"
+      },
+      {
+        "model_Name": "arrayent",
+        "smartId": "SGA0000000000",
+        "publicSmartId": "SGA00000000",
+        "name": "gateway",
+        "gatewayId": "537270f2cfd1613746ca81f3",
+        "addedOn": "1400008181552"
+      }
+    ],
+    "name": "My Summer Home",
+    "products": [],
+    "roomList": [
+      "Living Room",
+      "Kitchen",
+      "Basement",
+      "Garage",
+      "Downstairs"
+    ],
+    "routines": [
+      {
+        "name": "Home",
+        "_id": "535ac2faa633ba353480d90d",
+        "products": []
+      },
+      {
+        "name": "Away",
+        "_id": "535ac2faa633ba353480d90c",
+        "products": []
+      },
+      {
+        "name": "Sleep",
+        "_id": "535ac2faa633ba353480d90b",
+        "products": []
+      },
+      {
+        "name": "Vacation",
+        "_id": "535ac2faa633ba353480d90a",
+        "products": []
+      }
+    ],
+    "state": "North Carolina",
+    "users": [
+      {
+        "role": "primary",
+        "productIds": [],
+        "productWhitelist": false
+      },
+      {
+        "userId": "5368dc268693b9584f3cbe69",
+        "role": "owner",
+        "productIds": [],
+        "productWhitelist": false
+      },
+      {
+        "userId": "5368dd028693b9584f3cbe6d",
+        "role": "owner",
+        "productIds": [],
+        "productWhitelist": false
+      },
+      {
+        "userId": "5368dece8693b9584f3cbe71",
+        "role": "owner",
+        "productIds": [],
+        "productWhitelist": false
+      },
+      {
+        "userId": "5368df8c8693b9584f3cbe75",
+        "role": "owner",
+        "productIds": [],
+        "productWhitelist": false
+      },
+      {
+        "userId": "5368e2ba8693b9584f3cbe7a",
+        "role": "owner",
+        "productIds": [],
+        "productWhitelist": false
+      }
+    ],
+    "zipCode": "27010",
+    "locationId": "535ac2faa633ba353480d908",
+    "timeZone": "America/New_York",
+    "accessRole": {
+      "role": "primary",
+      "productIds": [],
+      "productWhitelist": false
+    }
+  },
+  {
+    "addedOn": "1398457141725",
+    "city": "Charlotte",
+    "currentMode": null,
+    "gateways": [],
+    "name": "Location 3",
+    "products": [],
+    "roomList": [
+      "Living Room",
+      "Kitchen",
+      "Basement",
+      "Garage",
+      "Downstairs"
+    ],
+    "routines": [
+      {
+        "name": "Home",
+        "_id": "535ac335a633ba353480d914",
+        "products": []
+      },
+      {
+        "name": "Away",
+        "_id": "535ac335a633ba353480d913",
+        "products": []
+      },
+      {
+        "name": "Sleep",
+        "_id": "535ac335a633ba353480d912",
+        "products": []
+      },
+      {
+        "name": "Vacation",
+        "_id": "535ac335a633ba353480d911",
+        "products": []
+      }
+    ],
+    "state": "North Carolina",
+    "users": [
+      {
+        "role": "primary",
+        "productIds": [],
+        "productWhitelist": false
+      }
+    ],
+    "zipCode": "27010",
+    "locationId": "535ac335a633ba353480d90f",
+    "timeZone": "America/New_York",
+    "accessRole": {
+      "role": "primary",
+      "productIds": [],
+      "productWhitelist": false
+    }
+  },
+  {
+    "addedOn": "1398461327289",
+    "city": "Charlotte",
+    "currentMode": null,
+    "gateways": [],
+    "name": "New location",
+    "products": [],
+    "roomList": [
+      "Living Room",
+      "Kitchen",
+      "Basement",
+      "Garage",
+      "Downstairs"
+    ],
+    "routines": [
+      {
+        "name": "Home",
+        "_id": "535ad38fa633ba353480d936",
+        "products": []
+      },
+      {
+        "name": "Away",
+        "_id": "535ad38fa633ba353480d935",
+        "products": []
+      },
+      {
+        "name": "Sleep",
+        "_id": "535ad38fa633ba353480d934",
+        "products": []
+      },
+      {
+        "name": "Vacation",
+        "_id": "535ad38fa633ba353480d933",
+        "products": []
+      }
+    ],
+    "state": "North Carolina",
+    "users": [
+      {
+        "role": "primary",
+        "productIds": [],
+        "productWhitelist": false
+      }
+    ],
+    "zipCode": "27010",
+    "locationId": "535ad38fa633ba353480d931",
+    "timeZone": "America/New_York",
+    "accessRole": {
+      "role": "primary",
+      "productIds": [],
+      "productWhitelist": false
+    }
+  },
+  {
+    "name": "Refrig#907476374",
+    "streetAddress1": "502 S Lafayette St, Shelby",
+    "streetAddress2": "Apt. XXXYYY",
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "zipCode": "27010",
+    "addedOn": "1402950576127",
+    "currentMode": null,
+    "users": [
+      {
+        "role": "primary",
+        "productIds": [],
+        "productWhitelist": false
+      }
+    ],
+    "gateways": [],
+    "products": [],
+    "routines": [
+      {
+        "name": "Home",
+        "_id": "539f53b047663a105bb8ba3c",
+        "products": []
+      },
+      {
+        "name": "Away",
+        "_id": "539f53b047663a105bb8ba3b",
+        "products": []
+      },
+      {
+        "name": "Sleep",
+        "_id": "539f53b047663a105bb8ba3a",
+        "products": []
+      },
+      {
+        "name": "Vacation",
+        "_id": "539f53b047663a105bb8ba39",
+        "products": []
+      }
+    ],
+    "roomList": [
+      "Living Room",
+      "Kitchen",
+      "Basement",
+      "Garage",
+      "Downstairs"
+    ],
+    "locationId": "539f53b047663a105bb8ba37",
+    "timeZone": "America/New_York",
+    "accessRole": {
+      "role": "primary",
+      "productIds": [],
+      "productWhitelist": false
+    }
+  }
+]

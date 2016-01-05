@@ -1,0 +1,28 @@
+<div class="review" ng-class="{'review-height-auto': isDetailsPage, 'review-full-width': isDetailsPage}">
+    <div class="review-section review-main-section">
+        <header class="review-header clearfix">
+            <div class="review-title-info">
+                <h3 class="review-title">{{review.title}}</h3>
+                <p ng-if="showAgencyName" class="review-agency-name">{{review.agencyName}}</p>
+            </div>
+            <div class="review-date">
+                <span>{{review.currentJobPosition}} &middot; {{review.date}}</span>
+            </div>
+        </header>
+
+        <div class="review-body" ng-class="{'full-length-text': isDetailsPage}">
+            <p ng-repeat="paragraph in review.content">
+                {{paragraph}}
+                <span ng-if="review.requireEllipsis" class="is-highlighted">...</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="review-section review-aside-section">
+        <progress-radial circle-size="48" value="{{review.score.overall}}"></progress-radial>
+
+        <div ng-if="!isDetailsPage" class="review-comments-counter">
+            {{review.totalComments}} <span class="icon-users"></span>
+        </div>
+    </div>
+</div>

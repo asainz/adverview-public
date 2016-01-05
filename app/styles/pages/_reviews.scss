@@ -1,0 +1,135 @@
+.reviews{
+    .form-body{
+        margin-bottom: -.5em;
+    }
+}
+
+.review{
+    @include clearfix();
+    @include apply-default-padding-for-container();
+
+    height: $review-height;
+
+    @include breakpoint($bp-small-width){
+        height: $review-height + 10;
+    }
+
+    background-color: palette(white);
+
+    &.review-height-auto{
+        height: auto;
+    }
+
+    &.review-full-width{
+        position: relative;
+
+        .review-section{
+            &.review-main-section{
+                width: 100%;
+                float: none;
+            }
+
+            &.review-aside-section{
+                position: absolute;
+                right: 1rem;
+                top: 1.5rem;
+                float: none;
+            }
+        }
+    }
+
+    .review-section{
+        position: relative;
+        height: 100%;
+
+        &.review-main-section{
+            float: left;
+            width: 80%;
+        }
+
+        &.review-aside-section{
+            float: right;
+            // width: 20%;
+        }
+    }
+
+    .review-header{
+        .review-title-info{
+            @include clearfix();
+
+            @include breakpoint($bp-small-width){
+                font-size: $font-size-msmall;
+            }
+
+            :first-child{
+                // float: left;
+            }
+
+            :last-child{
+                // float: left;
+            }
+        }
+
+        .review-agency-name{
+            display: inline-block;
+            color: palette(text, main);
+            margin-bottom: -5px;
+
+            // float: right;
+        }
+
+        .review-title{
+            display: inline-block;
+            color: palette(text, highlighted);
+            font-size: $font-size-normal;
+
+            margin: 0 1rem -5px 0;
+
+            // float: left;
+
+            &:before,
+            &:after{
+                content: "\0022";
+            }
+        }
+
+        .review-date{
+            float: left;
+        }
+
+        span{
+            font-size: $font-size-msmall;
+        }
+    }
+
+    .review-body{
+        position: absolute;
+        bottom: 0;
+        font-family: $bold-font;
+        font-size: $font-size-msmall;
+
+        &.full-length-text{
+            position: static;
+            margin-top: 2rem;
+        }
+
+        p{
+            margin: 0;
+        }
+    }
+
+    .radial-progress{
+        margin: auto;
+    }
+
+    .review-comments-counter{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: palette(gray, headerIcons);
+
+        text-align: center;
+        font-size: $font-size-msmall;
+    }
+}

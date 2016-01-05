@@ -1,0 +1,153 @@
+/**
+ * Main sizes
+ */
+
+$app-max-width: 900px;
+
+/**
+ * Breakpoints
+ */
+
+$bp-small-width: max-width 350px;
+$bp-greater-than-iphone-6-plus: min-width 420px;
+$bp-greater-than-max-width: min-width $app-max-width;
+
+/**
+ * Font sizes
+ */
+$font-size-xsmall: 10px;
+$font-size-small: 12px;
+$font-size-msmall: 14px;
+$font-size-normal: 16px;
+$font-size-medium: 20px;
+$font-size-large: 24px;
+$font-size-mlarge: 28px;
+$font-size-xlarge: 36px;
+$font-size-xxlarge: 96px;
+
+$default-font: 'latolight';
+$bold-font: 'latobold';
+
+$default-padding-for-containers: 1rem;
+
+/**
+ * Colors and palettes
+ */
+$color-base-black: #494949;
+$color-base-white: #fff;
+$color-base-red: tomato;
+
+$color-base-gray: rgb(120, 120, 120);
+$color-base-highlight: rgb(41, 189, 255);
+$color-font-black: rgb(50,50,50);
+$color-font-white: $color-base-white;
+
+$scoring-bg-colors: (
+  10: #ff490d,
+  20: #ff6e13,
+  30: #ff921a,
+  40: #ffb720,
+  50: #ffd826,
+  60: #cad45c,
+  70: #94cc93,
+  80: #5fc5c9,
+  90: #29bdff,
+  100: #00ADFA
+);
+
+$header-icons: #a3a3a3;
+
+$banner-color-base-background: rgb(45, 145, 181);
+
+$palettes: (
+    text: (
+        main: darken($color-base-gray, 5%),
+        nav: $color-base-black,
+        highlighted: $color-base-highlight,
+        black: $color-font-black,
+        white: $color-font-white
+    ),
+    main: (
+        base: $color-base-highlight
+    ),
+    gray: (
+        darkest: darken($color-base-gray, 20%),
+        dark: darken($color-base-gray, 5%),
+        base: $color-base-gray,
+        light: lighten($color-base-gray, 45%),
+        lightest: lighten($color-base-gray, 50%),
+        headerIcons: $header-icons,
+        progressRadial: #d6d6d6
+    ),
+    white: (
+        base: $color-base-white
+    ),
+    black: (
+        base: $color-base-black
+    ),
+    red: (
+        base: red,
+        gplus: rgb(215, 61, 50)
+    ),
+    green: (
+        base: green,
+        main: rgb(91, 190, 91)
+    ),
+    blue: (
+        fb: rgb(59, 89, 152),
+        tw: rgb(85, 172, 238)
+    )
+);
+
+$shades: (
+    black: (
+        fifty: transparentize($color-base-black, 0.5),
+        seventy: transparentize($color-base-black, 0.3),
+        ninety: transparentize($color-base-black, 0.1),
+        ten: transparentize($color-base-black, 0.9)
+    ),
+    white: (
+        fifty: transparentize($color-base-white, 0.5),
+        seventy: transparentize($color-base-white, 0.3)
+    ),
+    gray: (
+        fifty: transparentize($color-base-gray, 0.5),
+        seventy: transparentize($color-base-gray, 0.3)
+    ),
+    red: (
+        fifty: transparentize($color-base-red, 0.5)
+    ),
+    transparent: (
+        full: transparent
+    )
+);
+
+/**
+ * Header
+ */
+$header-height: 48px;
+
+/**
+ * Banner
+ */
+$banner-height: 145px;
+
+/**
+ * Z Indexes
+ */
+$screen-blocker-z-index: 9999;
+
+/**
+ * Globals: List
+ */
+$color-bg-even-row: map-get(map-get($palettes, gray), lightest);
+
+/**
+ * Pages
+ */
+
+/* Agencies */
+$agency-logo-border-radius: 8px;
+
+/* Reviews */
+$review-height: 120px;

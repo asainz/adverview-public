@@ -1,0 +1,54 @@
+<div class="comments review-comments">
+        
+    <div class="comments-post">
+        <header>
+            <div class="comments-counter">
+                {{totalComments}} <span class="icon-users"></span>
+            </div>
+        </header>
+
+        <div ng-show="userLoggedIn">
+            <form class="form" role="form" name="form" novalidate ng-model="addReviewCommentForm">
+
+                <div class="form-body no-padding">
+                    <input-control form="form" textarea="true" size="big" control="newCommentModel.comment"></input-control>
+
+                </div>
+
+                <div>
+                    <submit-control form="form" control="newCommentModel.submit" when-submit="submit"></submit-control>
+                </div>
+
+            </form>
+        </div>
+
+        <div ng-hide="userLoggedIn" class="highlighted-info">
+            <span class="is-highlighted" ng-click="goToLogin({origin: 'comment-review'})">Logueate</span> para poder dejar tu comentario.
+        </div>
+
+    </div>
+
+    <div class="comments-list list">
+        
+        <div
+            class="comment" 
+            ng-class-even="'even-row'"
+            ng-repeat="comment in comments"
+        >
+            <header>{{comment.date}}</header>
+            
+            <div class="comment-body">
+                {{comment.content}}
+            </div>
+
+        </div>
+
+        <load-more-content 
+            total-items="totalComments"
+            handle-click="loadMore"
+            items="comments"
+        ></load-more-content>
+
+    </div>
+
+</div>

@@ -1,0 +1,60 @@
+<div class="page page-agencies page-add-agency">
+
+    <banner class="banner-add-agency" background-image="bannerData.background">
+        <div class="banner-content">
+            <span>{{bannerData.text}}</span>
+
+            <footer>
+                <p class="disclaimer">
+                    <span class="icon-info-full"></span>
+                    Tus datos son totalmente confidenciales
+                </p>
+            </footer>
+        </div>
+    </banner>
+
+    <form class="form" role="form" name="form" novalidate ng-model="addAgencyForm">
+
+        <!-- <slider-control form="form" control="model.overallScore"></slider-control> -->
+
+        <div class="form-body">
+            <!-- <select-control form="form" control="model.currentlyEmployed"></select-control>
+            <select-control form="form" control="model.jobPosition"></select-control>
+            <select-control form="form" control="model.seniority"></select-control> -->
+
+            <div class="form-block">
+                <select-control form="form" control="model.currentlyEmployed"></select-control>
+                <select-control form="form" control="model.currentJobPosition"></select-control>
+                <select-control form="form" control="model.currentSeniority"></select-control>
+            </div>
+
+            <div class="form-block">
+                <p class="form-block-title">Completá los datos de la agencia:</p>
+
+                <input-control form="form" control="model.agencyName"></input-control>
+                <input-control form="form" size="big" control="model.web"></input-control>
+            </div>
+
+            <div class="form-block">
+                <p class="form-block-title">Tipo de agencia</p>
+
+                <checkbox-control form="form" control="model.type"></checkbox-control>
+            </div>
+
+            <div
+                class="form-block already-added-agency-notification"
+                ng-show="isAgencyAlreadyAdded"
+            >
+                <p>
+                    {{model.agencyName.value}} ya existe.
+                    <span class="is-highlighted" ng-click="goToAgency()">¿Querés dejar tu opinión?</span>
+                </p>
+            </div>
+
+            <submit-control form="form" control="model.submit" when-submit="submit"></submit-control>
+
+        </div>
+
+    </form>
+
+</div>

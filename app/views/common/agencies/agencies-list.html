@@ -1,0 +1,19 @@
+<div class="page page-agencies-list" ng-controller="AgenciesListCtrl">
+    <div class="list">
+        <agency-details-block
+            ng-repeat="agency in agencies"
+            ng-class-even="'even-row'"
+            navigate-to-details-page="true"
+            is-details-page="false"
+            agency="agency"
+            score-size="normal"
+        >
+        </agency-details-block>
+
+        <load-more-content
+            items="agencies"
+            total-items="totalAgencies"
+            handle-click="loadMore"
+        ></load-more-content>
+    </div>
+</div>

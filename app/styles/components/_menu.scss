@@ -1,0 +1,174 @@
+.menu{
+    $menu-profile-content-centering-top-margin: 4px;
+    @include translateX(100%);
+    @include transition(all .5s);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 13%;
+
+    background: palette(gray, dark);
+    z-index: 99999;
+
+    color: palette(text, white);
+
+    // overflow: auto;
+
+    input{
+        background: transparent;
+        border: 1px solid shade(white);
+        width: 100%;
+        padding: .5rem 1rem;
+    }
+
+    &.menu-open{
+        @include translateX(0);
+    }
+
+    .logo{
+        line-height: $header-height;
+
+        background-image: url('../images/logo-white.png');
+        background-size: 68%;
+        background-repeat: no-repeat;
+        background-position: .6em 50%;
+        color: shade(transparent, full);
+        width: 75%;
+        height: $header-height;
+
+        @include breakpoint($bp-greater-than-iphone-6-plus){
+            background-size: 28%;
+        }
+    }
+
+    .menu-profile{
+        @include clearfix();
+
+        padding: 3rem 2rem;
+        height: $banner-height;
+
+        background: palette(gray, darkest);
+
+        .menu-profile-image-container{
+            border-radius: 100%;
+            border: 2px solid palette(white);
+            width: 80px;
+            height: 80px;
+            float: left;
+            // margin-top: $menu-profile-content-centering-top-margin;
+
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 100%;
+
+                vertical-align: middle;
+
+                &.menu-profile-placeholder{
+                    height: 110%;
+                    margin-top: -10px;
+                }
+            }
+        }
+
+        .user-info{
+            // float: left;
+            margin-left: 2rem;
+            padding-top: 6px;
+            padding-left: 5em;
+
+            margin-top: $menu-profile-content-centering-top-margin;
+
+            p{
+                font-size: $font-size-large;
+
+                span{
+                    font-family: $bold-font;
+                }
+            }
+
+            .logout{
+                font-size: $font-size-medium;
+            }
+
+            @include breakpoint($bp-small-width){
+                p{
+                    font-size: $font-size-medium;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .menu-options{
+        padding-left: 2rem;
+
+        // we use this margin and padding set so we can move the scroll bar to the right
+        margin-right: -3em;
+        padding-right: 3em;
+
+        overflow: auto;
+        height: 60%;
+
+        li{
+            position: relative;
+            padding: 1.5rem 1.5rem 1.5rem 0;
+            border-bottom: 1px solid shade(white, fifty);
+
+            &.has-sublist{
+                font-family: $bold-font;
+
+                > span{
+                    font-size: 2.2rem;
+                    position: absolute;
+                    right: 1rem;
+                }
+            }
+
+            .icon-cancel{
+                position: absolute;
+                right: 1rem;
+                color: shade(white, fifty);
+                line-height: 22px;
+            }
+        }
+    }
+
+    .menu-close-button{
+        position: absolute;
+        left: -32px;
+        top: 0;
+
+        color: red;
+
+        .header-icon{
+            cursor: pointer;
+            color: palette(gray, headerIcons);
+            line-height: $header-height;
+
+            font-size: 2.2rem;
+        }
+    }
+
+    .autocomplete{
+        position: static;
+
+        ul{
+            position: static;
+        }
+    }
+}
+
+body.menu-open{
+    overflow: hidden !important;
+
+    .header{
+        z-index: $screen-blocker-z-index + 100;
+
+        .header-icon{
+            visibility: hidden !important;
+        }
+    }
+}

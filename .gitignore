@@ -1,0 +1,10 @@
+node_modules
+dist
+.tmp
+.sass-cache
+bower_components
+app/styles/main.css
+app/styles/main.css.map
+app/styles/bootstrap-sass-official/
+app/scripts/config/environment.js
+app/scripts/config/compiled-templates.js

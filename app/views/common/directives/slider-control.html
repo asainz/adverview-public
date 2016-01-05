@@ -1,0 +1,28 @@
+<div class="form-group slider-group" ng-class="{'has-error': hasErrors}">
+    <p 
+        ng-class="{'label-without-selected-value': !sliderWasMoved, 'label-with-selected-value': sliderWasMoved}"
+    >{{control.label}}</p>
+    <p ng-show="sliderWasMoved" class="slider-selected-value">
+        
+        <div style="display: inline-block;" ng-show="sliderWasMoved" ng-switch on="control.options.mode">
+            <div ng-switch-when="score">
+                <progress-radial 
+                    circle-size="{{scoreSizeInPixels}}" 
+                    value="{{control.value}}"
+                >
+                </progress-radial>
+            </div>
+
+            <div ng-switch-when="salary">
+                <p>{{control.formattedValue}}</p>
+            </div>
+
+            <div ng-switch-default>
+                <p>{{control.value}}</p>
+            </div>
+        </div>
+
+    </p>
+
+    <input type="text" ng-model="control.value" id="slider1" name="{{control.name}}" ng-pattern='/[^0]/' ng-required="control.validations.required" slider options="sliderOptions">
+</div>

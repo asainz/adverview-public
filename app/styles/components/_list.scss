@@ -1,0 +1,30 @@
+.list{
+    position: relative;
+    
+    .odd-row, .even-row{
+        background: $color-bg-even-row !important;
+
+        border-top: 1px solid $color-bg-even-row;
+        border-bottom: 1px solid $color-bg-even-row;
+    }
+
+    .list-loading-items{
+        text-align: center;
+        padding: 14rem;
+    }
+
+    .infinite-loading{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        .action-button{
+            background: shade(gray, seventy);
+            opacity: 1;
+
+            span{
+                color: palette(text, white);
+            }
+        }
+    }
+}

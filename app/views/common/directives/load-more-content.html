@@ -1,0 +1,10 @@
+<div class="infinite-loading" ng-show="isLoadMoreButtonVisible">
+    <button
+        class="action-button main-action-button"
+        ng-click="loadMore()"
+        ng-disabled="loadingMore"
+    >
+        <icon ng-show="loadingMore" name="oval-spinner" size="small"></icon>
+        <span ng-hide="loadingMore">{{loadMoreButtonLabel}}</span>
+    </button>
+</div>

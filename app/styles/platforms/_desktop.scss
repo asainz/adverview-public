@@ -1,0 +1,15 @@
+.desktop{
+    .dialog{
+        max-width: 400px;
+        left: 50%;
+        margin-left: -200px;
+    }
+
+    .menu{
+        left: 80%;
+
+        .logo{
+            background-size: 56%;
+        }
+    }
+}

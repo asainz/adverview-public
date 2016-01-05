@@ -1,0 +1,57 @@
+.screen-blocker{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $screen-blocker-z-index;
+
+    background: shade(black);
+}
+
+.unavailable-app-blocker{
+    position: relative;
+    z-index: $screen-blocker-z-index + 20;
+    height: 100%;
+
+    background: palette(main, base);
+
+    > div{
+      height: 85%;
+    }
+
+    h1{
+        position: relative;
+        height: 100%;
+        line-height: $header-height;
+
+        background-image: url('../images/logo-white.png');
+        background-size: 70%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        color: shade(transparent, full);
+
+        @include breakpoint($bp-greater-than-iphone-6-plus){
+            background-size: 40%;
+        }
+    }
+
+    .icon{
+        margin-bottom: 1em;
+    }
+
+    footer{
+          // position: absolute;
+          height: 15%;
+          bottom: 2em;
+          color: white;
+          text-transform: uppercase;
+          font-size: 12px;
+          width: 100%;
+
+        p{
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+}

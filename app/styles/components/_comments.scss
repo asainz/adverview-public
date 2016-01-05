@@ -1,0 +1,42 @@
+.comments{
+    color: palette(gray);
+
+    background-color: palette(white);
+
+    .comments-post{
+        @include apply-default-padding-for-container();
+
+        header{
+            @include clearfix();
+
+            .comments-counter{
+                float: right;
+            }
+
+            .comments-username{
+                float: left;
+            }
+        }
+
+        textarea{
+            width: 100%;
+            height: 150px;
+
+            padding: $default-padding-for-containers;
+        }
+    }
+
+    .comments-list{
+        margin-top: 2rem;
+
+        .comment{
+            padding: 1rem;
+
+            header{
+                text-align: left;
+                font-size: $font-size-small;
+                color: palette(text, highlighted);
+            }
+        }
+    }
+}

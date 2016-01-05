@@ -1,0 +1,33 @@
+html, body{
+    height: 100%;
+}
+
+h1, p, ul{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+label{
+    //override the margin set by bootstrap
+    margin-bottom: 0;
+}
+
+.nav {
+    a{
+        &:hover{
+            // remove background added by bootstrap
+            background-color: transparent !important;
+        }
+    }
+}
+
+ul,li{
+    padding: 0;
+    margin: 0;
+}
+
+li{ list-style: none; }

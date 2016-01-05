@@ -1,0 +1,591 @@
+      {
+        "gatewayId": "538e3fcfb8e2a603238monti",
+        "productId": "121212121212121212126666",
+        "modelNumber": "25376166",
+        "smartId": "SAC000000666D",
+        "publicSmartId": "SAC00000066",
+        "name": "Washer",
+        "deviceId": "999550766",
+        "attributes": [
+          {
+            "label": "Appliance State",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "stop": "Stop",
+              "start": "Start",
+              "pause": "Pause",
+              "off": "Off",
+              "programmingMode": "ProgrammingMode",
+              "running": "Running",
+              "complete": "Complete"
+            },
+            "name": "applianceState"
+          },
+          {
+            "label": "Control Lock",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "locked": "Locked",
+              "unlocked": "Unlocked"
+            },
+            "name": "controlLock"
+          },
+          {
+            "label": "cycle Energy Consumption",
+            "type": "integer",
+            "writable": true,
+            "readable": true,
+            "name": "cycleEnergyConsumption"
+          },
+          {
+            "label": "Temperature Setting",
+            "type": "temperature",
+            "writable": true,
+            "readable": true,
+            "temperatureRange": [
+              60,
+              90,
+              1
+            ],
+            "name": "temperatureSetting"
+          },
+          {
+            "label": "Room Temperature",
+            "type": "temperature",
+            "writable": false,
+            "readable": true,
+            "temperatureRange": [
+              0,
+              99,
+              1
+            ],
+            "name": "roomTemp"
+          },
+          {
+            "label": "Status",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "status"
+          },
+          {
+            "label": "Filter Status",
+            "type": "string",
+            "writable": true,
+            "readable": false,
+            "name": "filterStatus"
+          },
+          {
+            "label": "cycleName",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "fahrenheit": "Fahrenheit",
+              "celsius": "Celsius"
+            },
+            "name": "cycleName"
+          },
+          {
+            "label": "Error Code",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "errorCode"
+          }
+        ],
+        "routineAttributes": {
+          "temparatureUnit": {
+            "label": "Temparature Units",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "fahrenheit": "Fahrenheit",
+              "celsius": "Celsius"
+            },
+            "name": "temparatureUnit"
+          },
+          "mode": {
+            "label": "Mode",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "cool": "Cool",
+              "heat": "Heat",
+              "fanOnly": "Fan Only",
+              "economy": "Economy",
+              "on": "ON"
+            },
+            "name": "mode"
+          },
+          "fan": {
+            "label": "Fan Speed",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "off": "Off",
+              "low": "Low",
+              "medium": "Medium",
+              "high": "High",
+              "auto": "Auto"
+            },
+            "name": "fan"
+          }
+        },
+        "currentScheduleActive": true,
+        "modelType": "RoomAirConditioner",
+        "model_Name": "RoomAirConditioner",
+        "addedOn": "2014-06-06T15:43:33.001Z",
+        "brand": "Kenmore",
+        "imageUrl": "http://example.com/default/rac.png",
+        "manuals": [
+          {
+            "title": "Installation Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/5404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "Kitchen"
+      },
+      {
+        "gatewayId": "538e3787852e87c820ae0bc9",
+        "productId": "5397741232d5c81c0d1bc963",
+        "modelNumber": "10520002410",
+        "smartId": "KB4222200978C",
+        "publicSmartId": "KB422220097",
+        "name": "My SmartPlug",
+        "deviceId": "184550941",
+        "attributes": [
+          {
+            "label": "Switch",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "on": "ON",
+              "off": "OFF"
+            },
+            "defaultValue": "on",
+            "name": "mode"
+          },
+          {
+            "label": "Energy Consumption",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "integerRange": [
+              0,
+              100000,
+              1
+            ],
+            "name": "energyConsumption"
+          },
+          {
+            "label": "Power",
+            "type": "integer",
+            "writable": false,
+            "readable": true,
+            "integerRange": [
+              0,
+              100000,
+              1
+            ],
+            "name": "power"
+          },
+          {
+            "label": "Status",
+            "type": "string",
+            "writable": false,
+            "readable": true,
+            "name": "status"
+          },
+          {
+            "label": "Reset Energy Consumption",
+            "type": "enumeration",
+            "writable": true,
+            "readable": false,
+            "enumerationRange": {
+              "on": "ON"
+            },
+            "name": "resetEnergyConsumption"
+          }
+        ],
+        "routineAttributes": {
+          "mode": {
+            "label": "Switch",
+            "type": "enumeration",
+            "writable": true,
+            "readable": true,
+            "enumerationRange": {
+              "on": "ON",
+              "off": "OFF"
+            },
+            "defaultValue": "on",
+            "name": "mode"
+          }
+        },
+        "currentSchedule": {
+          "Monday": [
+            {
+              "hour": 19,
+              "minute": 32,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 35,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 37,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 37,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 37,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 37,
+              "controlValues": {
+                "mode": "on"
+              }
+            }
+          ],
+          "Tuesday": [
+            {
+              "hour": 16,
+              "minute": 1,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 16,
+              "minute": 1,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 16,
+              "minute": 1,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 16,
+              "minute": 1,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 16,
+              "minute": 1,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 16,
+              "minute": 1,
+              "controlValues": {
+                "mode": "off"
+              }
+            }
+          ],
+          "Friday": [
+            {
+              "hour": 0,
+              "minute": 24,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 26,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 28,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 32,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 33,
+              "controlValues": {
+                "mode": "off"
+              }
+            }
+          ],
+          "Wednesday": [
+            {
+              "hour": 21,
+              "minute": 39,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 30,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 33,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 33,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 33,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 33,
+              "controlValues": {
+                "mode": "on"
+              }
+            }
+          ],
+          "Thursday": [
+            {
+              "hour": 19,
+              "minute": 42,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 44,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 46,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 46,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 46,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 19,
+              "minute": 46,
+              "controlValues": {
+                "mode": "off"
+              }
+            }
+          ],
+          "Sunday": [
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "on"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 30,
+              "controlValues": {
+                "mode": "on"
+              }
+            }
+          ],
+          "Saturday": [
+            {
+              "hour": 0,
+              "minute": 0,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 0,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 0,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 0,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 0,
+              "controlValues": {
+                "mode": "off"
+              }
+            },
+            {
+              "hour": 0,
+              "minute": 0,
+              "controlValues": {
+                "mode": "off"
+              }
+            }
+          ]
+        },
+        "currentScheduleActive": true,
+        "modelType": "SmartPlug",
+        "model_Name": "SmartPlug 2 Pronged",
+        "addedOn": "2014-06-10T21:09:38.248Z",
+        "brand": "Kenmore",
+        "imageUrl": "http://example.com/default/smartPlug.png",
+        "manuals": [
+          {
+            "title": "Installation Guide",
+            "url": "http://www.managemylife.com/mmh/lis_pdf/INSTL/1404496L.pdf"
+          }
+        ],
+        "modes": [
+          {
+            "name": null
+          },
+          {
+            "name": "home"
+          },
+          {
+            "name": "away"
+          },
+          {
+            "name": "sleep"
+          },
+          {
+            "name": "vacations"
+          }
+        ],
+        "roomName": "asdasf"
+      }

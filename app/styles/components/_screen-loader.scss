@@ -1,0 +1,28 @@
+.screen-loader{
+    position: absolute;
+    top: $header-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $screen-blocker-z-index;
+
+    background-color: shade(white, seventy);
+    background-position: 50%;
+    background-repeat: no-repeat;
+
+    .screen-loader-logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -16px;
+        margin-top: -16px;
+
+        opacity: .6;
+
+        animation: infiniteRotation .8s both linear infinite;
+
+        path{
+            fill: palette(text, highlighted) !important;
+        }
+    }
+}

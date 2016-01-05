@@ -1,0 +1,25 @@
+{
+    "id": "1",
+    "name": "Young & Rubicam",
+    "location": "Buenos Aires",
+    "country": "Argentina",
+    "coordinates": {
+        "latitude": 29.213123,
+        "longitud": 321.92929
+    },
+    "category": "Agencia Integral",
+    "thumb": "images/backend/yr-logo.jpg",
+    "bannerBackground": "http://placehold.it/360x145",
+    "totalEmployees": 100,
+    "score": {
+        "overall": 6
+    },
+    "createdAt": 1417285584426,
+    "tags": [
+        "AGENCIA INTEGRAL",
+        "SEO",
+        "MOBILE DIGITAL",
+        "MEDIOS`"
+    ],
+    "totalReviews": 10
+}

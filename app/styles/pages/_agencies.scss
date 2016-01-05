@@ -1,0 +1,76 @@
+.page-agencies{
+    .agency-logo-container{
+        width: 71px;
+        height: 71px;
+
+        border-radius: $agency-logo-border-radius;
+
+        > img{
+            width: 100%;
+            height: 100%;
+
+            border-radius: $agency-logo-border-radius;
+            border: 1px solid palette(gray, light);
+        }
+    }
+
+    .google-maps-container{
+        position: relative;
+        padding-bottom: 50%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+
+    .agency-details{
+        @include apply-default-padding-for-container();
+        display: inline-block;
+        font-size: $font-size-normal;
+
+        .highlighted{
+            font-family: $bold-font;
+        }
+
+        .webpage-block{
+            margin: 1rem 0;
+        }
+
+        .icon-loading{
+            margin-left: .5em;
+        }
+    }
+
+    .page-agencies-list{
+        height: auto;
+    }
+}
+
+.page-add-agency{
+    .already-added-agency-notification{
+        p{
+            text-align: center;
+        }
+    }
+}
+
+.details-block{
+    &.agency-details-block{
+        font-size: $font-size-xsmall;
+        text-transform: uppercase;
+
+        header{
+            font-family: $bold-font;
+        }
+
+        .agency-disclaimer{
+            font-family: $bold-font;
+        }
+    }
+}

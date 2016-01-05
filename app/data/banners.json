@@ -1,0 +1,29 @@
+{
+    "agencies": {
+        "background": "images/banners/agencies.jpg"
+    },
+    "addAgency": {
+        "background": "images/banners/agencies.jpg",
+        "text": ""
+    },
+    "salaries": {
+        "background": "images/banners/agencies.jpg",
+        "text": ""
+    },
+    "averageSalary": {
+        "background": "images/banners/agencies.jpg",
+        "text": ""
+    },
+    "addSalary": {
+        "background": "images/banners/agencies.jpg",
+        "text": ""
+    },
+    "news": {
+        "background": "images/banners/agencies.jpg",
+        "text": ""
+    },
+    "allReviews": {
+        "background": "images/banners/agencies.jpg",
+        "text": ""
+    }
+}

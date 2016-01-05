@@ -1,0 +1,88 @@
+.page-login{
+    @include apply-default-padding-for-container();
+
+    background-image: url('../images/bg-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: palette(text, white);
+
+    header{
+        padding: 8rem 0;
+
+        p{
+            text-align: center;
+            font-size: $font-size-medium;
+        }
+    }
+
+    .login-logged-content{
+        position: relative;
+        height: 100%;
+    }
+
+    .login-action-buttons{
+        position: absolute;
+        width: 100%;
+        bottom: 10rem;
+
+        .action-button{
+            position: relative;
+
+            text-transform:  none;
+            font-family: $bold-font;
+            font-size: $font-size-medium;
+
+            margin-bottom: 2rem;
+            padding: 1.5rem 0;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            &.fb-action-button{
+                background: palette(blue, fb);
+            }
+
+            &.gplus-action-button{
+                background: palette(red, gplus);
+            }
+
+            .button-icon{
+                position: absolute;
+                left: 14px;
+                top: 14px;
+
+                color: white;
+            }
+        }
+    }
+
+    .login-loading{
+        text-align: center;
+          margin-top: 6em;
+
+        p{
+            font-style: normal;
+            text-transform: uppercase;
+            font-size: 12px;
+              margin-top: 1em;
+        }
+    }
+
+    .login-disclaimer{
+        position: absolute;
+        bottom: 0;
+        
+        width: 100%;
+        
+        p{
+            text-align: center;
+            font-style: italic;
+
+            .icon{
+                font-size: $font-size-msmall;
+            }
+        }
+    }
+}

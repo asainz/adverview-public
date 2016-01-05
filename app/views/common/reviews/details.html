@@ -1,0 +1,37 @@
+<div class="page page-reviews page-agencies" ng-controller="ReviewDetailsCtrl">
+    <banner class="banner-agency" background-image="agency.bannerBackground">
+        <agency-details-block is-details-page="false" agency="agency" score-size="big"></agency-details-block>
+    </banner>
+
+    <review-details-block
+        review="review"
+        is-details-page="true"
+        show-agency-name="false">
+    </review-details-block>
+
+    <div class="social-options">
+        <div class="social-options-left">
+            <div class="social-networks-shares-count">
+              <span class="share-count-number" ng-show="loadingShareCount">
+                <icon name="oval-spinner" size="small" color="green"></icon>
+              </span>
+              <span class="share-count-number" ng-hide="loadingShareCount">{{totalShareCount}}</span>
+              <span class="share-count-label">shares</span>
+            </div>
+            <span ng-click="shareOnFacebook()" class="icon icon-fb-squared"></span>
+            <span ng-click="shareOnTwitter()" class="icon icon-tw-squared"></span>
+            <span ng-click="shareOnGPlus()" class="icon icon-gplus-squared"></span>
+        </div>
+        <div class="social-options-right">
+            <likes model="review" entity="review" when-user-not-logged-in="goToLogin"></likes>
+        </div>
+    </div>
+
+    <comments
+        class="review-comments"
+        entity="review"
+        model="review"
+        total-comments="totalComments"
+        user-logged-in="user.loggedIn"
+    ></comments>
+</div>

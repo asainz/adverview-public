@@ -1,0 +1,8 @@
+<div ng-show="!userLoggedIn">
+    <p>Please log into the app</p>
+    <fb:login-button scope="public_profile,email" id="fbLoginButton"></fb:login-button>
+</div>
+
+<div ng-show="userLoggedIn">
+    <p>Welcome {{user.name}}!</p>
+</div>

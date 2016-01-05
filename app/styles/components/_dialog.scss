@@ -1,0 +1,27 @@
+.dialog {
+    @include apply-default-padding-for-container();
+    z-index: $screen-blocker-z-index + 100;
+    position: fixed;
+    top: 30%;
+    left: 10%;
+    width: 80%;
+    background: palette(white);
+
+    box-shadow: 0 0 30px 0 shade(black, fifty);
+
+    h2{
+        margin: 0;
+    }
+
+    header{
+        margin-bottom: 1rem;
+    }
+
+    .dialog-content{
+        margin-bottom: 3rem;
+    }
+
+    .dialog-actions{
+        text-align: right;
+    }
+}

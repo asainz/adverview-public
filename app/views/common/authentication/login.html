@@ -1,0 +1,40 @@
+<div class="page page-login">
+    <div class="login-logged-content" ng-show="!user.loggedIn">
+        <header>
+            <p>{{model.title}}</p>
+        </header>
+
+        <div class="login-action-buttons">
+            <button
+                ng-if="false"
+                class="action-button gplus-action-button"
+            >
+                <span class="button-icon icon-gplus-empty"></span>
+                Ingresá con Google
+            </button>
+
+            <button
+                ng-click="loginWithFB()"
+                class="action-button fb-action-button"
+            >
+                <span class="button-icon icon-fb-squared-no-border"></span>
+                Ingresá con Facebook
+            </button>
+        </div>
+
+        <div class="login-loading" ng-show="loginInProcess">
+            <span class="icon icon-loading"></span>
+            <p>Cargando el perfil de usuario</p>
+        </div>
+
+        <footer class="login-disclaimer">
+            <p><span class="icon icon-info-full"></span>no publicaremos nada en tu muro</p>
+        </footer>
+    </div>
+
+    <div ng-show="user.loggedIn">
+        <header>
+            <p>Hola {{user.profile.firstName}}, ya estás registrado.</p>
+        </header>
+    </div>
+</div>

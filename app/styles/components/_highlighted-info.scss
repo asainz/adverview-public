@@ -1,0 +1,16 @@
+.highlighted-info{
+    position: relative;
+    background-color: palette(gray, lightest);
+    padding: 1em;
+    margin-top: 1em;
+
+    &:after{
+        content: "";
+        position: absolute;
+        background-color: palette(main, base);
+        width: 5px;
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}

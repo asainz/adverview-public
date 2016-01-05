@@ -1,0 +1,36 @@
+<div class="form-group" ng-class="{'has-error': hasErrors}">
+
+    <div class="control-labels-container">
+        <p class="control-label">{{control.label}}</p>
+        <p class="form-help-block form-validation-length" ng-if="control.validations.labels.words">{{control.validations.labels.words}}</p>
+    </div>
+
+    <input
+        ng-if="!textarea"
+        ng-model="control.value"
+        name="{{control.name}}"
+        class="form-control"
+        placeholder="{{control.placeholder}}"
+        ng-required="control.validations.required"
+        ng-maxlength="{{control.validations.maxlength}}"
+        ng-minlength="{{control.validations.minlength}}"
+        type="{{control.validations.type}}"
+        ng-pattern="control.validations.pattern"
+    >
+
+    <textarea
+        ng-if="textarea"
+        ng-model="control.value"
+        name="{{control.name}}"
+        class="form-control"
+        placeholder="{{control.placeholder}}"
+        ng-required="control.validations.required"
+        ng-minlength="{{control.validations.minlength}}"
+        ng-maxlength="{{control.validations.maxlength}}"
+        validate-minimum-words="{{control.validations.minWords}}"
+        rows="{{rows}}"
+        ng-pattern="control.validations.pattern"
+    ></textarea>
+
+    <p class="form-help-block form-footnote" ng-if="control.footnote">{{control.footnote}}</p>
+</div>

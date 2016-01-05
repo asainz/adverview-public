@@ -1,0 +1,63 @@
+.header{
+    @include flexbox((
+        display: flex,
+        justify-content: space-between
+    ));
+
+    height: $header-height;
+    line-height: $header-height;
+
+    padding: 0 1rem;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    box-shadow: 0 0 20px 0 shade(black, ten);
+
+    width: 100%;
+    background: palette(white);
+
+    h1{
+        line-height: $header-height;
+
+        background-image: url('../images/logo.png');
+        background-size: 88%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        color: shade(transparent, full);
+    }
+
+    &>div{
+        float: right;
+    }
+
+    .header-icon{
+        cursor: pointer;
+        color: palette(gray, headerIcons);
+        line-height: $header-height;
+
+        font-size: 2.2rem;
+    }
+}
+
+.no-flexbox{
+    .header{
+        @include clearfix();
+
+        > span:first-child{
+            float: left;
+        }
+
+        > span:last-child{
+            float: right;
+        }
+
+        > h1{
+            width: 55%;
+            float: left;
+            margin-left: 16%;
+        }
+    }
+}

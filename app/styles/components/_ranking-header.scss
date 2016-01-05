@@ -1,0 +1,46 @@
+.ranking-header{
+    $color-bg: palette(gray, lightest);
+
+    @include flexbox((
+        display: flex,
+        justify-content: space-between
+    ));
+
+    padding: $default-padding-for-containers;
+    border-bottom: 1px solid darken($color-bg, 10%);
+    border-top: 1px solid darken($color-bg, 10%);
+
+    background: $color-bg;
+    color: palette(text, main);
+
+    font-size: $font-size-normal;
+    line-height: 30px;
+
+    h2{
+        font-size: inherit;
+        display: inline-block;
+        margin: 0;
+    }
+
+    .icon-custom-chevron-down{
+        margin-top: 4px;
+        margin-right: 15px;
+
+        font-size: 2.2rem;
+        color: palette(gray, headerIcons);
+    }
+}
+
+.no-flexbox{
+    .ranking-header{
+        @include clearfix();
+
+        > div{
+            float: left;
+        }
+
+        .icon-custom-chevron-down{
+            float:  right;
+        }
+    }
+}

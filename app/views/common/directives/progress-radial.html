@@ -1,0 +1,32 @@
+<div class="radial-progress" ng-style="{width: circle.viewportX, height: circle.viewportY}" ng-class="colorClass">
+    <div class="progress-radial-content">
+            <svg
+                width="{{circle.viewportX}}" 
+                height="{{circle.viewportY}}" 
+                viewPort="0 0 {{circle.viewportX}} {{circle.viewportY}}" 
+                version="1.1" 
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <circle 
+                    class="circle"
+                    r="{{circle.radius}}" 
+                    cx="{{circle.x}}" 
+                    cy="{{circle.y}}" 
+                    fill="transparent" 
+                    stroke-dasharray="{{circle.circunference}}" 
+                    stroke-dashoffset="0"
+                ></circle>
+                <circle 
+                    class="circle value-stroke"
+                    r="{{circle.radius}}" 
+                    cx="{{circle.x}}" 
+                    cy="{{circle.y}}" 
+                    fill="transparent" 
+                    ng-style="circleStyle" 
+                    stroke-dasharray="{{circle.circunference}}" 
+                    stroke-dashoffset="0"
+                ></circle>
+            </svg>
+            <div class="progress-radial-label" ng-style="labelStyle">{{labelValue}}</div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="page page-news page-news-expanded" ng-controller="NewsExpandedCtrl">
+    <div class="news-block">
+
+        <div class="block-content">
+            <h1 class="news-title">{{news.title}}</h1>
+        </div>
+
+        <div class="social-options">
+            <div class="social-options-left">
+                <div class="social-networks-shares-count">
+                  <span class="share-count-number" ng-show="loadingShareCount">
+                    <icon name="oval-spinner" size="small" color="green"></icon>
+                  </span>
+                  <span class="share-count-number" ng-hide="loadingShareCount">{{totalShareCount}}</span>
+                  <span class="share-count-label">shares</span>
+                </div>
+                <span ng-click="shareOnFacebook()" class="icon icon-fb-squared"></span>
+                <span ng-click="shareOnTwitter()" class="icon icon-tw-squared"></span>
+                <span ng-click="shareOnGPlus()" class="icon icon-gplus-squared"></span>
+            </div>
+
+            <div class="social-options-right">
+                <likes model="news" entity="news" when-user-not-logged-in="goToLogin"></likes>
+            </div>
+        </div>
+
+        <div class="block-content">
+            <header>
+                <img ng-src="{{news.thumbnail}}" alt="{{news.title}}" ng-click="goToExpandedView(news)">
+            </header>
+
+            <div>
+                <p ng-bind-html="news.content"></p>
+            </div>
+
+            <comments
+                class="news-comments"
+                entity="news"
+                model="news"
+                total-comments="totalComments"
+                user-logged-in="user.loggedIn"
+            ></comments>
+        </div>
+    </div>
+</div>

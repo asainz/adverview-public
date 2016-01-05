@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mockservice version="1.0" xml:lang="en-US">
+<service default_real_url_index="0" default_scenario_id="1" description="" error_scenario_id="null" hang_time="0" name="Agency details" request_inspector_name="null" service_response_type="1" tag="" url="api.php/resource/agency&amp;id=1">
+<request_inspector_json_rules enable_flag="false"/>
+<response_schema enable_flag="false"/>
+<xi:include href="./mockey_def_depot/Agency_details/scenarios/default_success_response.xml" parse="xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</service>
+</mockservice>

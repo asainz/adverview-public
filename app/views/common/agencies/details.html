@@ -1,0 +1,59 @@
+<div class="page page-agencies" ng-controller="AgencyDetailsCtrl">
+    <banner class="banner-agency" background-image="agency.bannerBackground">
+        <agency-details-block is-details-page="true" agency="agency" score-size="big"></agency-details-block>
+    </banner>
+
+    <div class="agency-information">
+        <div class="agency-details">
+            <div class="tags">
+                <span class="tag" ng-repeat="tag in agency.tags">{{tag}}</span>
+            </div>
+
+            <div class="webpage-block">
+                <a target="_blank" ng-href="{{agency.web}}">{{agency.web}}</a>
+            </div>
+
+            <div ng-show="::user.loaded">
+                <button
+                    ng-show="user.loggedIn && !user.isFollowing"
+                    class="action-button main-action-button inline-action-button"
+                    ng-click="follow()"
+                >
+                    Seguir a esta agencia
+                    <icon ng-show="isUpdating" name="oval-spinner" size="small"></icon>
+                </button>
+
+                <button
+                    ng-show="user.loggedIn && user.isFollowing"
+                    class="action-button main-action-button inline-action-button"
+                    ng-click="unfollow()"
+                >
+                    Dejar de seguir a esta agencia
+                    <icon ng-show="isUpdating" name="oval-spinner" size="small"></icon>
+                </button>
+
+                <p ng-hide="user.loggedIn">
+                    <span class="is-highlighted" ng-click="goToLogin()">Logueate</span> para seguir a esta agencia
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="reviews list" ng-show="reviews">
+        <review-details-block
+            ng-repeat="review in reviews"
+            ng-class-odd="'odd-row'"
+            ng-click="goToDetails(review, agency)"
+            review="review"
+            is-details-page="false"
+            show-agency-name="false"
+        ></review-details-block>
+
+        <load-more-content
+            total-items="totalReviews"
+            handle-click="loadMore"
+            items="reviews"
+        ></load-more-content>
+    </div>
+</div>

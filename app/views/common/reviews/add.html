@@ -1,0 +1,35 @@
+<div class="page page-agencies page-add-review" ng-controller="AddReviewCtrl">
+
+    <banner class="banner-agency" background-image="agency.bannerBackground">
+        <agency-details-block
+            agency="agency"
+            show-score="false"
+            show-add-review-option="false"
+            is-details-page="false"
+        ></agency-details-block>
+    </banner>
+
+    <form class="form" role="form" name="form" novalidate ng-model="addReviewForm">
+
+        <slider-control form="form" control="model.overallScore"></slider-control>
+
+        <div class="form-body">
+            <select-control form="form" control="model.currentlyEmployed"></select-control>
+
+            <div class="form-block">
+                <select-control form="form" control="model.currentJobPosition"></select-control>
+                <select-control form="form" control="model.currentSeniority"></select-control>
+            </div>
+
+            <div class="form-block">
+                <input-control form="form" textarea="true" control="model.title"></input-control>
+                <input-control form="form" textarea="true" size="big" control="model.description"></input-control>
+            </div>
+
+            <submit-control form="form" control="model.submit" when-submit="submit"></submit-control>
+
+        </div>
+
+    </form>
+
+</div>

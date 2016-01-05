@@ -1,0 +1,79 @@
+<div class="page page-salaries page-add-salary" ng-controller="AverageSalaryCtrl">
+
+    <banner class="banner-add-agency banner-average-salary" background-image="bannerData.background">
+        <div class="banner-content">
+            <span>{{bannerData.text}}</span>
+        </div>
+    </banner>
+
+    <div class="ranking-header">
+        <div><h2>Sueldo promedio</h2></div>
+        <span class="icon-custom-chevron-down"></span>
+    </div>
+
+    <div class="salary-details">
+
+        <div class="salary-details-block">
+            <div class="column column-left job-details">
+                <h2>{{salary.job}} {{salary.currentSeniority}}</h2>
+                <p>{{salary.country}} ({{salary.currencyName}})</p>
+                <p ng-click="goToSimilarPositions()">2 similares</p>
+            </div>
+
+            <div class="column column-right">
+                <p class="coloured-salary" ng-class="getSalaryColourClass()">
+                    {{salary.currencyPrefix}}{{salary.formattedAverageSalary}}
+                </p>
+            </div>
+        </div>
+
+        <div class="salary-details-block">
+            <div class="column column-left">
+                <p>Salario más alto</p>
+            </div>
+
+            <div class="column column-right">
+                <p>{{salary.currencyPrefix}}{{salary.formattedMaxSalary}}</p>
+            </div>
+        </div>
+
+        <div class="salary-details-block">
+            <div class="column column-left">
+                <p>Salario más bajo</p>
+            </div>
+
+            <div class="column column-right">
+                <p>{{salary.currencyPrefix}}{{salary.formattedMinSalary}}</p>
+            </div>
+        </div>
+
+        <div class="salary-details-block">
+            <div class="column column-left">
+                <p>Cantidad de salarios ingresados</p>
+            </div>
+
+            <div class="column column-right">
+                <p>{{salary.countSalary}}</p>
+            </div>
+        </div>
+
+        <div class="salary-details-block agencies-salaries-ranking" ng-show="loadingAgencies || (finishedLoadAgencies && agencies.length > 0)">
+            <div ng-hide="loadingAgencies" class="multiline-column">
+                <div ng-repeat="agency in agencies" class="multiline-column-line">
+                    <div class="column column-left">
+                        <p ng-show="$index === 0">Agencias qué mejor pagan</p>
+                    </div>
+                    <div class="column column-right">
+                        <p ng-click="goToAgency(agency)">{{agency.name}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loading-icon" ng-show="loadingAgencies">
+                <p><icon name="oval-spinner" size="small" color="dark"></icon></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

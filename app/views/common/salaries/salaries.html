@@ -1,0 +1,50 @@
+<navbar></navbar>
+
+<div class="page page-salaries">
+
+    <banner class="banner-add-agency banner-add-salary" background-image="bannerData.background">
+        <div class="banner-content">
+            <span>{{bannerData.text}}</span>
+
+            <span
+                class="action-button inline-action-button main-action-button"
+                ng-click="goToAddSalary()"
+            >Compará</span>
+
+            <footer>
+                <p class="disclaimer">
+                    <span class="icon-info-full"></span>
+                    Tus datos son totalmente confidenciales
+                </p>
+            </footer>
+        </div>
+    </banner>
+
+    <div class="ranking-header">
+        <div><h2>Últimos salarios cargados</h2></div>
+        <span class="icon-custom-chevron-down"></span>
+    </div>
+
+    <div class="salaries list" ng-show="salaries">
+        <salary-details-block
+            ng-repeat="salary in salaries"
+            ng-class-even="'even-row'"
+            ng-click="goToDetails(salary)"
+            salary="salary"
+            show-similar-positions="!isFilteringByJob"
+        ></salary-details-block>
+
+        <load-more-content
+            handle-click="loadMore"
+            items="salaries"
+            total-items="totalSalaries"
+        ></load-more-content>
+    </div>
+
+    <div class="list" ng-hide="salaries">
+        <div class="list-loading-items">
+            <icon name="oval-spinner" size="small" color="blue"></icon>
+        </div>
+    </div>
+
+</div>

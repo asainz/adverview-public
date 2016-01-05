@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<mockservice version="1.0" xml:lang="en-US">
+<proxy_settings proxy_enabled="false" proxy_url=""/>
+<service default_real_url_index="0" default_scenario_id="1" description="" error_scenario_id="null" hang_time="0" name="history" request_inspector_name="null" service_response_type="1" tag="" url="v1/kcd/history/location/{locationId}/product/{productId}/list/v2">
+<request_inspector_json_rules enable_flag="false"/>
+<response_schema enable_flag="false"/>
+<scenario http_resp_status_code="200" id="1" name="success" tag="">
+<scenario_match scenario_match_evaluation_rules_flag="false"/>
+<scenario_response><![CDATA[{ "history":[
+  {"user": "Jim Smith", "event": "Door Opened", "updatedAt": "1392136616835"},
+  { "user": "Jim Smith", "event": "Door Closed", "updatedAt": "1392134416835" }
+  ]
+}]]></scenario_response>
+<scenario_response_header/>
+</scenario>
+</service>
+<service default_real_url_index="0" default_scenario_id="null" description="" error_scenario_id="null" hang_time="0" name="v2 (auto generated)" request_inspector_name="null" service_response_type="0" tag="" url="http://v1/kcd/history/location/538dfcee49fe7e8c773ec3f9/product/538f7d4b9b5132740805fb09/list/v2">
+<request_inspector_json_rules enable_flag="false"/>
+<response_schema enable_flag="false"/>
+<real_url url="http://v1/kcd/history/location/538dfcee49fe7e8c773ec3f9/product/538f7d4b9b5132740805fb09/list/v2"/>
+</service>
+</mockservice>

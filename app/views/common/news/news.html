@@ -1,0 +1,53 @@
+<navbar></navbar>
+
+<div class="page page-news">
+
+    <banner class="banner-add-agency banner-news" background-image="bannerData.background">
+        <div class="banner-content">
+            <span>{{bannerData.text}}</span>
+
+            <span
+                ng-hide="user.loggedIn"
+                class="action-button inline-action-button main-action-button"
+                ng-click="goToLogin()"
+            >sumate</span>
+        </div>
+    </banner>
+
+    <div class="ranking-header">
+        <div><h2>Últimas notas</h2></div>
+        <span class="icon-custom-chevron-down"></span>
+    </div>
+
+    <div class="list" ng-show="allNews">
+        <div class="news-list">
+          <div ng-repeat="news in allNews" class="news-block">
+            <header>
+                <img ng-src="{{news.thumbnail}}" alt="{{news.title}}" ng-click="goToExpandedView(news)">
+            </header>
+
+            <div class="block-content">
+                <p class="news-category" ng-click="goToExpandedView(news)">{{news.category}}</p>
+                <h2 class="news-title" ng-click="goToExpandedView(news)">{{news.title}}</h2>
+
+                <!-- <div>
+                    <p ng-bind-html="news.content"></p>
+                </div>   -->
+            </div>
+          </div>
+        </div>
+
+          <load-more-content
+            items="allNews"
+            total-items="totalNews"
+            handle-click="loadMore"
+          ></load-more-content>
+    </div>
+
+    <div class="list" ng-hide="allNews">
+        <div class="list-loading-items">
+            <icon name="oval-spinner" size="small" color="blue"></icon>
+        </div>
+    </div>
+
+</div>

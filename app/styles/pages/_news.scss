@@ -1,0 +1,48 @@
+.page-news{
+    .news-list{
+        @include apply-default-padding-for-container();
+        background: palette(gray, light);
+    }
+
+    .news-category{
+        text-transform: uppercase;
+        font-size: $font-size-xsmall;
+        font-family: $bold-font;
+    }
+
+    .news-title{
+        font-size: $font-size-large;
+    }
+
+    .comments{
+        .comments-post{
+            padding: 0;
+        }
+    }
+
+    header{
+        margin-bottom: 2rem;
+
+        img{
+            width: 100%;
+        }
+    }
+}
+
+.news-block{
+    background: palette(white);
+    margin-bottom: 2rem;
+
+    .block-content{
+        @include apply-default-padding-for-container();
+
+        h1 {
+            margin: 0;
+            font-family: $bold-font;
+        }
+
+        p {
+            font-size: $font-size-msmall;
+        }
+    }
+}

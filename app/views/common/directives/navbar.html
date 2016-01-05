@@ -1,0 +1,7 @@
+<div>
+    <ul class="nav">
+        <li ng-repeat="option in options" ng-class="{selected: option.path === target}">
+            <h1 ng-click="goTo(option.path)">{{option.name}}</h1>
+        </li>
+    </ul>
+</div>
